@@ -1,6 +1,30 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ctype="Workbench" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kinetic/Math/Vector.cs" ctype="Workbench">
+    <Files>
+      <File FileName="Prototype/VBO1/VBOCubeMain.cs" Line="1" Column="1" />
+      <File FileName="Prototype/VBO2/TwoShapesMain.cs" Line="5" Column="14" />
+      <File FileName="Kinetic/Math/Frustum.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Math/Matrix.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Math/Plane.cs" Line="16" Column="1" />
+      <File FileName="Kinetic/Math/Quaternion.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Math/QuickMath.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Math/Transformation.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Math/Vector.cs" Line="17" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Kinetic" expanded="True">
+            <Node name="Kinetic" expanded="True" selected="True">
+              <Option id="ShowAllFiles" value="True" />
+              <Node name="Math" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
