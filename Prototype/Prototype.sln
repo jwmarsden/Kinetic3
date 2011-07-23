@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBO1", "VBO1\VBO1.csproj", "{0BE32159-ECEF-4675-9AAA-FA39743A1A9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBO2", "VBO2\VBO2.csproj", "{BBE2AF62-56E1-480B-A1CB-F8DB449FF7AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,8 +15,12 @@ Global
 		{0BE32159-ECEF-4675-9AAA-FA39743A1A9D}.Debug|x86.Build.0 = Debug|x86
 		{0BE32159-ECEF-4675-9AAA-FA39743A1A9D}.Release|x86.ActiveCfg = Release|x86
 		{0BE32159-ECEF-4675-9AAA-FA39743A1A9D}.Release|x86.Build.0 = Release|x86
+		{BBE2AF62-56E1-480B-A1CB-F8DB449FF7AD}.Debug|x86.ActiveCfg = Debug|x86
+		{BBE2AF62-56E1-480B-A1CB-F8DB449FF7AD}.Debug|x86.Build.0 = Debug|x86
+		{BBE2AF62-56E1-480B-A1CB-F8DB449FF7AD}.Release|x86.ActiveCfg = Release|x86
+		{BBE2AF62-56E1-480B-A1CB-F8DB449FF7AD}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = VBO1\VBO1.csproj
+		StartupItem = VBO2\VBO2.csproj
 	EndGlobalSection
 EndGlobal
