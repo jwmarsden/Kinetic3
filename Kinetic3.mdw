@@ -1,0 +1,7 @@
+<WorkspaceItem ctype="Workspace">
+  <Items>
+    <Item>Kinetic/Kinetic.sln</Item>
+    <Item>OpenTK/OpenTK.sln</Item>
+    <Item>Prototype/Prototype.sln</Item>
+  </Items>
+</WorkspaceItem>
