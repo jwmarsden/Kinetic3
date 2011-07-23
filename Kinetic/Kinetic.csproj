@@ -40,5 +40,14 @@
     <Compile Include="Math\QuickMath.cs" />
     <Compile Include="Math\Transformation.cs" />
     <Compile Include="Math\Vector.cs" />
+    <Compile Include="Common\Buffer\Buffer.cs" />
+    <Compile Include="Common\Buffer\DynamicFloatBuffer.cs" />
+    <Compile Include="Common\Buffer\DynamicIntBuffer.cs" />
+    <Compile Include="Common\Buffer\FloatBuffer.cs" />
+    <Compile Include="Common\Buffer\IntBuffer.cs" />
+    <Compile Include="Common\ColorUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
   </ItemGroup>
 </Project>
