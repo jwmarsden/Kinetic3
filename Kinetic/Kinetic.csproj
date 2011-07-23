@@ -52,6 +52,9 @@
     <Compile Include="IO\InputRegister.cs" />
     <Compile Include="IO\Key.cs" />
     <Compile Include="IO\Mouse.cs" />
+    <Compile Include="Scene\Spatial.cs" />
+    <Compile Include="Scene\Node.cs" />
+    <Compile Include="Scene\Geometry.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
