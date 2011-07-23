@@ -55,6 +55,10 @@
     <Compile Include="Scene\Spatial.cs" />
     <Compile Include="Scene\Node.cs" />
     <Compile Include="Scene\Geometry.cs" />
+    <Compile Include="Render\Renderer.cs" />
+    <Compile Include="Render\Camera.cs" />
+    <Compile Include="Render\VisibleSet.cs" />
+    <Compile Include="Render\Catalog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

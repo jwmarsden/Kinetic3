@@ -16,7 +16,7 @@
 
 using System;
 
-namespace Kinetic
+namespace Kinetic.Scene
 {
 	public class Node
 	{

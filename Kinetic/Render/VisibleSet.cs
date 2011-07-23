@@ -16,11 +16,11 @@
 
 using System;
 
-namespace Kinetic.Scene
+namespace Kinetic.Renderer
 {
-	public class Spatial
+	public class VisibleSet
 	{
-		public Spatial ()
+		public VisibleSet ()
 		{
 		}
 	}
