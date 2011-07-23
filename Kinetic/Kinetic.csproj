@@ -46,8 +46,21 @@
     <Compile Include="Common\Buffer\FloatBuffer.cs" />
     <Compile Include="Common\Buffer\IntBuffer.cs" />
     <Compile Include="Common\ColorUtil.cs" />
+    <Compile Include="Render\BoundingBox.cs" />
+    <Compile Include="Render\Bound.cs" />
+    <Compile Include="IO\Display.cs" />
+    <Compile Include="IO\InputRegister.cs" />
+    <Compile Include="IO\Key.cs" />
+    <Compile Include="IO\Mouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\" />
+    <Folder Include="Resource\" />
+    <Folder Include="Render\" />
+    <Folder Include="Scene\" />
+    <Folder Include="IO\" />
   </ItemGroup>
 </Project>
