@@ -18,11 +18,28 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class Texture
+	public class Texture: Bindable
 	{
+		string name;
+		string path;
+		
 		public Texture ()
 		{
+			name = null;
+			path = null;
 		}
+		
+		public string Name {
+			get { return name; }
+			set { name = value; }
+		}
+		
+		public string Path {
+			get { return path; }
+			set { path = value; }
+		}
+		
+		
 	}
 }
 

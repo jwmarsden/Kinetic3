@@ -65,6 +65,7 @@
     <Compile Include="Resource\VertexProgramCatalog.cs" />
     <Compile Include="Resource\TextureCatalog.cs" />
     <Compile Include="Resource\FragmentProgamCatalog.cs" />
+    <Compile Include="Resource\Bindable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

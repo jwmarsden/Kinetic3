@@ -18,7 +18,7 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class VertexProgram
+	public class VertexProgram: Bindable
 	{
 		public VertexProgram ()
 		{

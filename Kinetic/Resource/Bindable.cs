@@ -18,10 +18,18 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class FragmentProgram: Bindable
+	public class Bindable
 	{
-		public FragmentProgram ()
+		int id;
+		
+		public Bindable ()
 		{
+			id = -1;
+		}
+		
+		public int ID {
+			get { return id; }
+			set { id = value; }
 		}
 	}
 }
