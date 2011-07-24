@@ -61,11 +61,14 @@
     <Compile Include="Resource\Texture.cs" />
     <Compile Include="Resource\VertexProgram.cs" />
     <Compile Include="Resource\FragmentProgram.cs" />
-    <Compile Include="Resource\Catalog.cs" />
-    <Compile Include="Resource\VertexProgramCatalog.cs" />
-    <Compile Include="Resource\TextureCatalog.cs" />
-    <Compile Include="Resource\FragmentProgamCatalog.cs" />
     <Compile Include="Resource\Bindable.cs" />
+    <Compile Include="Resource\VertexBuffer.cs" />
+    <Compile Include="Resource\IndiciesBuffer.cs" />
+    <Compile Include="Resource\Catalog\Catalog.cs" />
+    <Compile Include="Resource\Catalog\FragmentProgamCatalog.cs" />
+    <Compile Include="Resource\Catalog\TextureCatalog.cs" />
+    <Compile Include="Resource\Catalog\VertexProgramCatalog.cs" />
+    <Compile Include="Render\States.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
@@ -76,5 +79,6 @@
     <Folder Include="Render\" />
     <Folder Include="Scene\" />
     <Folder Include="IO\" />
+    <Folder Include="Resource\Catalog\" />
   </ItemGroup>
 </Project>

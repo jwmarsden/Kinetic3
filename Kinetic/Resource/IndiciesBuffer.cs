@@ -16,11 +16,11 @@
 
 using System;
 
-namespace Kinetic.Scene
+namespace Kinetic.Resource
 {
-	public class Geometry: Spatial
+	public class IndiciesBuffer: Bindable
 	{
-		public Geometry ()
+		public IndiciesBuffer ()
 		{
 		}
 	}

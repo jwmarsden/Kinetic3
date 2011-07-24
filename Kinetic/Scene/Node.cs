@@ -18,7 +18,7 @@ using System;
 
 namespace Kinetic.Scene
 {
-	public class Node
+	public class Node: Spatial
 	{
 		public Node ()
 		{

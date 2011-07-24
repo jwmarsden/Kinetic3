@@ -38,8 +38,6 @@ namespace Kinetic.Resource
 			get { return path; }
 			set { path = value; }
 		}
-		
-		
 	}
 }
 

@@ -16,13 +16,23 @@
 
 using System;
 
-namespace Kinetic.Scene
+namespace Kinetic.Renderer
 {
-	public class Geometry: Spatial
+	[FlagsAttribute]
+	public enum CullMode
 	{
-		public Geometry ()
-		{
-		}
+		VIEW=1,
+		ALWAYS=2,
+		NEVER=3,
+		INHERIT=4
+	}
+	
+	[FlagsAttribute]
+	public enum State {
+		CURRENT,
+		UPDATE_LOCAL_BOUND,
+		UPDATE_WORLD_BOUND,
+		UPDATE_WORLD_TRANSFORM
 	}
 }
 

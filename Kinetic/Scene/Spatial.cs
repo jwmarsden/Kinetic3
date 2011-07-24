@@ -1,27 +1,149 @@
- #region License
- //  Copyright 2010-2011 J.W.Marsden
- // 
- //    Licensed under the Apache License, Version 2.0 (the "License");
- //    you may not use this file except in compliance with the License.
- //    You may obtain a copy of the License at
- // 
- //        http://www.apache.org/licenses/LICENSE-2.0
- // 
- //    Unless required by applicable law or agreed to in writing, software
- //    distributed under the License is distributed on an "AS IS" BASIS,
- //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- //    See the License for the specific language governing permissions and
- //    limitations under the License.
- #endregion
+#region License
+//  Copyright 2010-2011 J.W.Marsden
+// 
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+// 
+//        http://www.apache.org/licenses/LICENSE-2.0
+// 
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+#endregion
 
 using System;
+
+using Kinetic.Math;
+using Kinetic.Renderer;
 
 namespace Kinetic.Scene
 {
 	public class Spatial
 	{
+		string name;
+
+		Spatial parent;
+
+		Transformation localTransformation;
+		Transformation worldTransformation;
+
+		State spatialState;
+		CullMode cullMode;
+
 		public Spatial ()
 		{
+			name = this.GetType ().Name;
+			parent = null;
+			
+			localTransformation = new Transformation ();
+			worldTransformation = new Transformation ();
+			
+			spatialState = State.UPDATE_LOCAL_BOUND;
+			cullMode = CullMode.INHERIT;
+		}
+
+		public string Name {
+			get { return name; }
+			set { name = value; }
+		}
+
+		public Spatial Parent {
+			get { return parent; }
+			set { parent = value; }
+		}
+
+		public Transformation Transformation {
+			get {
+				CheckUpdateState ();
+				return localTransformation;
+			}
+			set {
+				localTransformation = value;
+				spatialState = State.UPDATE_LOCAL_BOUND;
+			}
+		}
+
+		public Vector3f Translation {
+			get {
+				CheckUpdateState ();
+				return localTransformation.Translation;
+			}
+			set {
+				localTransformation.Translation = value;
+				spatialState = State.UPDATE_WORLD_BOUND | State.UPDATE_WORLD_TRANSFORM;
+			}
+		}
+
+		public Vector3f Scale {
+			get {
+				CheckUpdateState ();
+				return localTransformation.Scale;
+			}
+			set {
+				localTransformation.Scale = value;
+				spatialState = State.UPDATE_LOCAL_BOUND;
+			}
+		}
+
+		public Matrix3f Rotation {
+			get {
+				CheckUpdateState ();
+				return localTransformation.Rotation;
+			}
+			set {
+				localTransformation.Rotation = value;
+				spatialState = State.UPDATE_LOCAL_BOUND;
+			}
+		}
+		
+		public Transformation WorldTransformation {
+			get {
+				CheckUpdateState ();
+				return worldTransformation;
+			}
+		}
+
+		public Vector3f WorldTranslation {
+			get {
+				CheckUpdateState ();
+				return worldTransformation.Translation;
+			}
+		}
+
+		public Vector3f WorldScale {
+			get {
+				CheckUpdateState ();
+				return worldTransformation.Scale;
+			}
+		}
+
+		public Matrix3f WorldRotation {
+			get {
+				CheckUpdateState ();
+				return worldTransformation.Rotation;
+			}
+		}
+		
+		public CullMode CullMode {
+			get { return cullMode; }
+			set { cullMode = value; }
+		}
+
+		public State State {
+			get { return spatialState; }
+		}
+
+		public void AddSpatialState (State state) {
+			if (parent != null) {
+				parent.AddSpatialState (state);
+			}
+			spatialState |= state;
+		}
+		
+		public virtual void CheckUpdateState () {
 		}
 	}
 }
