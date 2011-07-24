@@ -3,18 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinetic", "Kinetic.csproj", "{B94DC721-B025-466F-846D-ED29F7AACEFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinetic-OpenTK", "Kinetic-OpenTK\Kinetic-OpenTK.csproj", "{2470A8C0-B277-4624-B2DA-B8E9F36502A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinetic-Example", "Kinetic-Example\Kinetic-Example.csproj", "{0CA1C97F-41E6-48B6-A92B-8AE6EE95305A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CA1C97F-41E6-48B6-A92B-8AE6EE95305A}.Debug|x86.ActiveCfg = Debug|x86
+		{0CA1C97F-41E6-48B6-A92B-8AE6EE95305A}.Debug|x86.Build.0 = Debug|x86
+		{0CA1C97F-41E6-48B6-A92B-8AE6EE95305A}.Release|x86.ActiveCfg = Release|x86
+		{0CA1C97F-41E6-48B6-A92B-8AE6EE95305A}.Release|x86.Build.0 = Release|x86
+		{2470A8C0-B277-4624-B2DA-B8E9F36502A8}.Debug|x86.ActiveCfg = Debug|x86
+		{2470A8C0-B277-4624-B2DA-B8E9F36502A8}.Debug|x86.Build.0 = Debug|x86
+		{2470A8C0-B277-4624-B2DA-B8E9F36502A8}.Release|x86.ActiveCfg = Release|x86
+		{2470A8C0-B277-4624-B2DA-B8E9F36502A8}.Release|x86.Build.0 = Release|x86
 		{B94DC721-B025-466F-846D-ED29F7AACEFF}.Debug|x86.ActiveCfg = Debug|x86
 		{B94DC721-B025-466F-846D-ED29F7AACEFF}.Debug|x86.Build.0 = Debug|x86
 		{B94DC721-B025-466F-846D-ED29F7AACEFF}.Release|x86.ActiveCfg = Release|x86
 		{B94DC721-B025-466F-846D-ED29F7AACEFF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Kinetic.csproj
+		StartupItem = Kinetic-Example\Kinetic-Example.csproj
 	EndGlobalSection
 EndGlobal

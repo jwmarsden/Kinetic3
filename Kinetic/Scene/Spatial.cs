@@ -17,7 +17,7 @@
 using System;
 
 using Kinetic.Math;
-using Kinetic.Renderer;
+using Kinetic.Render;
 
 namespace Kinetic.Scene
 {

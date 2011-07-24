@@ -71,12 +71,9 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Application\" />
     <Folder Include="Resource\" />
     <Folder Include="Render\" />
     <Folder Include="Scene\" />
     <Folder Include="IO\" />
-    <Folder Include="Resource\Catalog\" />
-    <Folder Include="Resource\Catalog\" />
   </ItemGroup>
 </Project>
