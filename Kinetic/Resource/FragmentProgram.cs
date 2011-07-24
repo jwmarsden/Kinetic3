@@ -16,11 +16,11 @@
 
 using System;
 
-namespace Kinetic.Renderer
+namespace Kinetic.Resource
 {
-	public class Catalog
+	public class FragmentProgram
 	{
-		public Catalog ()
+		public FragmentProgram ()
 		{
 		}
 	}

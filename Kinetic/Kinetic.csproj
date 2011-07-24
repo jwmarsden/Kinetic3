@@ -58,7 +58,13 @@
     <Compile Include="Render\Renderer.cs" />
     <Compile Include="Render\Camera.cs" />
     <Compile Include="Render\VisibleSet.cs" />
-    <Compile Include="Render\Catalog.cs" />
+    <Compile Include="Resource\Texture.cs" />
+    <Compile Include="Resource\VertexProgram.cs" />
+    <Compile Include="Resource\FragmentProgram.cs" />
+    <Compile Include="Resource\Catalog.cs" />
+    <Compile Include="Resource\VertexProgramCatalog.cs" />
+    <Compile Include="Resource\TextureCatalog.cs" />
+    <Compile Include="Resource\FragmentProgamCatalog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
