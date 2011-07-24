@@ -1,32 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKGameWindow.cs" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs" ctype="Workbench">
     <Files>
-      <File FileName="Kinetic/Resource/Bindable.cs" Line="39" Column="4" />
-      <File FileName="Kinetic/Render/States.cs" Line="1" Column="1" />
-      <File FileName="Kinetic/Render/Renderer.cs" Line="172" Column="3" />
-      <File FileName="Kinetic/Scene/Node.cs" Line="18" Column="1" />
-      <File FileName="Kinetic/Math/Vector.cs" Line="1" Column="1" />
-      <File FileName="Kinetic/Resource/Catalog.cs" Line="52" Column="34" />
-      <File FileName="Kinetic/Resource/Texture.cs" Line="43" Column="1" />
-      <File FileName="Kinetic/IO/Display.cs" Line="1" Column="1" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKDisplay.cs" Line="59" Column="17" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKGameWindow.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/Provider.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKDisplay.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Application/BaseApplication.cs" Line="86" Column="21" />
+      <File FileName="Kinetic/Kinetic-Example/K3TestApplication1.cs" Line="19" Column="29" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKGameWindow.cs" Line="241" Column="40" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs" Line="30" Column="51" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKCamera.cs" Line="49" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Kinetic" expanded="True">
-            <Node name="Kinetic" expanded="True">
-              <Option id="ShowAllFiles" value="False" />
-            </Node>
-            <Node name="Kinetic-OpenTK" expanded="True" selected="True">
-              <Node name="Provider" expanded="True">
-                <Node name="OpenTK" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="Kinetic" expanded="True" selected="True" />
           </Node>
-          <Node name="Prototype" expanded="True" />
         </State>
       </Pad>
     </Pads>
