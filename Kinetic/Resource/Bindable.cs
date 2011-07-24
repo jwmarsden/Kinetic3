@@ -21,15 +21,21 @@ namespace Kinetic.Resource
 	public class Bindable
 	{
 		int id;
+		bool loaded;
 		
 		public Bindable ()
 		{
 			id = -1;
+			loaded = false;
 		}
 		
 		public int ID {
 			get { return id; }
 			set { id = value; }
+		}
+		
+		public bool Loaded {
+			get { return loaded; }	
 		}
 	}
 }
