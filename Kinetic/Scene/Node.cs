@@ -15,13 +15,40 @@
  #endregion
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
+
+using Kinetic.Render;
 
 namespace Kinetic.Scene
 {
 	public class Node: Spatial
 	{
-		public Node ()
-		{
+		/// <summary>
+		/// Holds the related children of the spatial node.
+		/// </summary>
+		List<Spatial> children;
+		
+		public Node () {
+			children = new List<Spatial>();
+		}
+		
+		public List<Spatial> Children {
+			get { return children; }	
+		}
+		
+		public void AttachChild(Spatial child) {
+			if(!children.Contains(child)) {
+				children.Add(child);
+				child.Parent = this;
+			}
+		}
+		
+		public void DetachChild(Spatial child) {
+			if(children.Contains(child)) {
+				children.Remove(child);
+				child.Parent = null;
+			}
 		}
 	}
 }

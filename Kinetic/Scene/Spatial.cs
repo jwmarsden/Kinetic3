@@ -21,21 +21,48 @@ using Kinetic.Renderer;
 
 namespace Kinetic.Scene
 {
+	/// <summary>
+	/// Spatial is the base class of anything that has a spatial location within Kinetic.
+	/// All classes that are placeable in a scene are children of Spatial.
+	/// </summary>
 	public class Spatial
 	{
+		/// <summary>
+		/// Name for the spatial. Used for debugging and finding the object.
+		/// </summary>
 		string name;
 
+		/// <summary>
+		/// Link to the parent Spatial. 
+		/// If the object is in a scene it has a parent unless it is the root node.
+		/// </summary>
 		Spatial parent;
 
+		/// <summary>
+		/// Storage for the local transformation. This is writable by the application.
+		/// </summary>
 		Transformation localTransformation;
+		
+		/// <summary>
+		/// Internal Storage for the world transformation. Applications can read this but it is managed by Kinetic.
+		/// </summary>
 		Transformation worldTransformation;
 
+		/// <summary>
+		/// Current State of the spatial. This is used to track if the transforms require updating.
+		/// </summary>
 		State spatialState;
+		
+		/// <summary>
+		/// Cull Behavior.
+		/// </summary>
 		CullMode cullMode;
 
 		public Spatial ()
 		{
+			// TODO: This should have a unique number suffic across all of the same types.
 			name = this.GetType ().Name;
+			
 			parent = null;
 			
 			localTransformation = new Transformation ();
@@ -143,7 +170,22 @@ namespace Kinetic.Scene
 			spatialState |= state;
 		}
 		
-		public virtual void CheckUpdateState () {
+		public virtual void CheckUpdateState() 
+		{
+			if(spatialState == State.CURRENT) {
+				return;
+			}
+			if((spatialState & State.UPDATE_LOCAL_BOUND) == State.UPDATE_LOCAL_BOUND) {
+				//UpdateLocalBound();
+				//UpdateWorldTransform();
+				//UpdateWorldBound();	
+			} else if((spatialState & State.UPDATE_WORLD_TRANSFORM) == State.UPDATE_WORLD_TRANSFORM) {
+				//UpdateWorldTransform();
+				//UpdateWorldBound();
+			} else if((spatialState & State.UPDATE_WORLD_BOUND) == State.UPDATE_WORLD_BOUND) {
+				//UpdateWorldBound();
+			}
+			spatialState = State.CURRENT;
 		}
 	}
 }
