@@ -16,7 +16,7 @@
 
 using System;
 
-namespace Kinetic.Renderer
+namespace Kinetic.Render
 {
 	public class VisibleSet
 	{

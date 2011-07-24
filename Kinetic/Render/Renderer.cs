@@ -19,7 +19,7 @@ using System.Drawing;
 
 using Kinetic.Scene;
 
-namespace Kinetic.Renderer
+namespace Kinetic.Render
 {
 	public enum RENDERER_TYPE {
 		OPENTK	
