@@ -65,9 +65,20 @@ namespace Kinetic.Base
 			//sceneHolder = null;
 		}
 		
-		public Display[] Displays
-		{
+		public Display[] Displays {
 			get { return _displays; }
+		}
+		
+		public Display MainDisplay {
+			get { return _displays[_mainDisplay]; }
+		}
+		
+		public Renderer[] Renderers {
+			get { return _renderers; }	
+		}
+		
+		public Renderer MainRenderer {
+			get { return _renderers[_mainRenderer]; }	
 		}
 		
 		public Provider Provider {
@@ -218,6 +229,8 @@ namespace Kinetic.Base
 			Console.WriteLine("Creating Main Renderer.");
 			_renderers = new Renderer[1];
 			_renderers[_mainRenderer] = _provider.CreateRenderer();
+			_renderers[_mainRenderer].Catalog = new Catalog();
+			
 			//renderers[mainRenderer].Initialize();
 		}
 	}
