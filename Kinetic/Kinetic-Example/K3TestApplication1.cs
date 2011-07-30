@@ -26,9 +26,8 @@ namespace KineticExample
 		
 		public override void Initialize() 
 		{	
-			Display display = _displays[0];
-			display.SetTitle("Kinetic K3");
-			string[] extensions = display.SupportedExtensions();
+			MainDisplay.SetTitle("Kinetic K3");
+			string[] extensions = MainDisplay.SupportedExtensions();
 			Console.Write("Supported Extensions: ");
 			foreach (string extension in extensions) 
 			{
