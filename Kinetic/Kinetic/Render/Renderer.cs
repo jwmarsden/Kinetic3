@@ -21,9 +21,6 @@ using Kinetic.Scene;
 
 namespace Kinetic.Render
 {
-	public enum RENDERER_TYPE {
-		OPENTK	
-	}
 	
 	public abstract class Renderer
 	{
@@ -70,7 +67,7 @@ namespace Kinetic.Render
 		/// <summary>
 		/// Buffer management
 		/// </summary>
-		/*
+	
 		public abstract void ClearBackBuffer();
 		
 		public abstract void ClearZBuffer();
@@ -82,7 +79,7 @@ namespace Kinetic.Render
 			ClearZBuffer();
 			ClearStencilBuffer();
 		}
-		
+		/*
 		public abstract void ClearBackBuffer(int XPos, int YPos, int Width, int Height);
 		
 		public abstract void ClearZBuffer(int XPos, int YPos, int Width, int Height);

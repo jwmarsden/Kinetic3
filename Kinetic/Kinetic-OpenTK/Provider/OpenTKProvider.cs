@@ -19,6 +19,10 @@ namespace Kinetic.Provide
 		public override ResourceManager CreateResourceManager() {
 			return new OpenTKResourceManager();
 		}
+		
+		public override Renderer CreateRenderer () {
+			return new OpenTKRenderer();
+		}
 	}
 }
 

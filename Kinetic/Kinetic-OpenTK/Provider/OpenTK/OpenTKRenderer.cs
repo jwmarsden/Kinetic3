@@ -64,6 +64,24 @@ namespace Kinetic.Provide
 			nullScene = false;
 		}
 		
+		/// <summary>
+		/// Buffer management
+		/// </summary>
+		public override void ClearBackBuffer() {
+			GL.Clear(ClearBufferMask.ColorBufferBit);
+		}
+		
+		public override void ClearZBuffer() {
+			GL.Clear(ClearBufferMask.DepthBufferBit);
+		}
+		
+		public override void ClearStencilBuffer() {
+			GL.Clear(ClearBufferMask.StencilBufferBit);
+		}
+		
+		public override void ClearBuffers() {
+			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit | ClearBufferMask.StencilBufferBit);
+		}
 	}
 	
 	

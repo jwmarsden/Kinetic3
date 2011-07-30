@@ -31,16 +31,10 @@ namespace Kinetic
 		
 		public abstract ResourceManager CreateResourceManager();
 		
-		/*
-		public Renderer CreateRenderer (Display display)
-		{
-			switch(providerSelection) {
-			case ProviderSelection.OpenTK:
-				return new OpenTKRenderer(display);
-			}
-			return null;
-		}
 		
+		public abstract Renderer CreateRenderer ();
+		
+		/*
 		public ResourceManager CreateResourceManager() {
 			switch(providerSelection) {
 			case ProviderSelection.OpenTK:

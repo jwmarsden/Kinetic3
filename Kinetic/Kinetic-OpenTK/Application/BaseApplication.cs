@@ -148,8 +148,9 @@ namespace Kinetic.Base
 							 * Handle Render
 							 **/
 							display.BeforeRender();
+							renderers[mainRenderer].ClearBuffers();
 							/*
-							renderers[mainRenderer].Clear();
+							
 							foreach (Renderer renderer in renderers) {
 								
 								if(renderer != null) {
@@ -207,7 +208,7 @@ namespace Kinetic.Base
 		public virtual void CreateRenderers() {
 			Console.WriteLine("Creating Main Renderer.");
 			renderers = new Renderer[1];
-			//renderers[mainRenderer] = provider.CreateRenderer(displays[mainDisplay]);
+			renderers[mainRenderer] = provider.CreateRenderer();
 			//renderers[mainRenderer].Initialize();
 		}
 	}
