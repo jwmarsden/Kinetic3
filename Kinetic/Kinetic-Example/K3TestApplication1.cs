@@ -18,7 +18,7 @@ namespace KineticExample
 {
 	public class K3TestApplication1: BaseApplication
 	{
-		Texture kineticMainImageTexture = null;
+		Texture _kineticBannerTexture = null;
 		
 		public K3TestApplication1 ()
 		{
@@ -36,14 +36,14 @@ namespace KineticExample
 			}
 			Console.Write("\r\n");
 			
-			kineticMainImageTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "KineticBanner.jpg");
+			_kineticBannerTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "KineticBanner.jpg");
 		}
 		
 		public override void Update(long time) {	
 		}
 		
 		public override void ApplicationRender() {
-			MainRenderer.DrawTexture(kineticMainImageTexture);
+			MainRenderer.DrawTexture(_kineticBannerTexture);
 		}
 		
 		public static void Main (string[] args) 
