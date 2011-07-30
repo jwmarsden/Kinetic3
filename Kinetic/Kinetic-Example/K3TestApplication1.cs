@@ -3,6 +3,7 @@ using System;
 
 using Kinetic.Base;
 using Kinetic.IO;
+using Kinetic.Resource;
 
 namespace KineticExample
 {
@@ -14,7 +15,7 @@ namespace KineticExample
 		
 		public override void Initialize() 
 		{	
-			Display display = displays[0];
+			Display display = _displays[0];
 			display.SetTitle("Kinetic K3");
 			string[] extensions = display.SupportedExtensions();
 			Console.Write("Supported Extensions: ");
@@ -33,8 +34,6 @@ namespace KineticExample
 			firstPersonHandler.UpDown = true;
 			handlers[0] = firstPersonHandler;
 			*/
-
-			
 			
 		}
 		

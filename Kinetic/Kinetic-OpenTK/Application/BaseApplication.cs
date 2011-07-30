@@ -23,25 +23,27 @@ using System.Collections.Generic;
 using Kinetic.Scene;
 using Kinetic.IO;
 using Kinetic.Render;
+using Kinetic.Resource;
 
 namespace Kinetic.Base
 {
 	public abstract class BaseApplication
 	{
-		protected Provider provider;
+		protected Provider _provider;
+		protected ResourceManager _resourceManager;
 		
-		public int mainDisplay = 0;
-		public int mainRenderer = 0;
+		public int _mainDisplay = 0;
+		public int _mainRenderer = 0;
 		
 		/// <summary>
 		/// Container to hold the display objects. Must be same cardinality as renderers.
 		/// </summary>
-		protected Display[] displays;
+		protected Display[] _displays;
 		
 		/// <summary>
 		/// Constianer to hold the renderer objects. Must be same cardinality as displays.
 		/// </summary>
-		protected Renderer[] renderers;
+		protected Renderer[] _renderers;
 
 		/// <summary>
 		/// Constianer to hold extra handler objects.
@@ -55,16 +57,25 @@ namespace Kinetic.Base
 		
 		public BaseApplication ()
 		{
-			provider = new Kinetic.Provide.OpenTKProvider();
-			displays = null;
-			renderers = null;
+			_provider = new Kinetic.Provide.OpenTKProvider();
+			_resourceManager = _provider.CreateResourceManager();
+			_displays = null;
+			_renderers = null;
 			//handlers = null;
 			//sceneHolder = null;
 		}
 		
 		public Display[] Displays
 		{
-			get { return displays; }
+			get { return _displays; }
+		}
+		
+		public Provider Provider {
+			get { return _provider; }
+		}
+		
+		public ResourceManager ResourceManager {
+			get { return _resourceManager; }	
 		}
 		
 		public abstract void Initialize();
@@ -80,7 +91,7 @@ namespace Kinetic.Base
 			Initialize();
 			
 			Console.WriteLine("Display Window.");
-			displays[mainDisplay].ShowWindow();
+			_displays[_mainDisplay].ShowWindow();
 			
 			Console.WriteLine("Initialise Application Loop.");
 			Stopwatch timer = new Stopwatch();
@@ -135,9 +146,9 @@ namespace Kinetic.Base
 					updateWatch.Stop();
 					
 					int d = 0;
-					foreach (Display display in displays) {
+					foreach (Display display in _displays) {
 						display.ProcessEvents();
-						if(display.Closing && d==mainDisplay) {
+						if(display.Closing && d==_mainDisplay) {
 							Console.WriteLine("Close of Main Display Detected.");
 							running = false;
 							break;
@@ -148,9 +159,8 @@ namespace Kinetic.Base
 							 * Handle Render
 							 **/
 							display.BeforeRender();
-							renderers[mainRenderer].ClearBuffers();
+							_renderers[_mainRenderer].ClearBuffers();
 							/*
-							
 							foreach (Renderer renderer in renderers) {
 								
 								if(renderer != null) {
@@ -158,7 +168,6 @@ namespace Kinetic.Base
 								}
 							}
 							*/
-	
 							display.AfterRender();
 						}
 						renderWatch.Stop();
@@ -196,19 +205,19 @@ namespace Kinetic.Base
 		
 		public void CreateDisplays() {
 			Console.WriteLine("Creating Display.");
-			displays = new Display[1];
-			displays[mainDisplay] = provider.CreateDisplay();
+			_displays = new Display[1];
+			_displays[_mainDisplay] = _provider.CreateDisplay();
 			Console.WriteLine("Constructing Main Display Window.");
-			displays[mainDisplay].Width = 800;
-			displays[mainDisplay].Height = 600;
-			displays[mainDisplay].CreateWindow();
+			_displays[_mainDisplay].Width = 800;
+			_displays[_mainDisplay].Height = 600;
+			_displays[_mainDisplay].CreateWindow();
 			Console.WriteLine("Main Display Window Created.");
 		}	
 		
 		public virtual void CreateRenderers() {
 			Console.WriteLine("Creating Main Renderer.");
-			renderers = new Renderer[1];
-			renderers[mainRenderer] = provider.CreateRenderer();
+			_renderers = new Renderer[1];
+			_renderers[_mainRenderer] = _provider.CreateRenderer();
 			//renderers[mainRenderer].Initialize();
 		}
 	}

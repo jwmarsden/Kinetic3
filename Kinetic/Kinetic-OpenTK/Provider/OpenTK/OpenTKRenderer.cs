@@ -57,12 +57,40 @@ namespace Kinetic.Provide
 {
 	public class OpenTKRenderer : Renderer
 	{
-		protected bool nullScene;
+		protected OpenTKCamera _camera;
+		
+		protected bool _nullScene;
 
 		public OpenTKRenderer ()
 		{
-			nullScene = false;
+			_camera = null;
+			_nullScene = false;
 		}
+		
+		public override int GetWidth() {
+			return -1;
+		}
+		
+		public override int GetHeight() {
+			return -1;
+		}
+		
+		public override string GetRendererType() {
+			return "OpenTK";
+		}
+		
+		public override void SetCamera(Camera Camera) {
+			if(Camera is OpenTKCamera) {
+				_camera = (OpenTKCamera) Camera;
+			} else {
+				throw new Exception("Cannot attach a non OpenTKCamera to an OpenTKRenderer.");
+			}
+		}
+		
+		public override Camera GetCamera() {
+			return _camera;
+		}
+		
 		
 		/// <summary>
 		/// Buffer management

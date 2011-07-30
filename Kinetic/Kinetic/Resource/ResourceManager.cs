@@ -8,14 +8,14 @@ namespace Kinetic.Resource
 		{
 		}
 
-		public abstract Texture ImportTexture(Catalog catalog, string name, string path);
+		public abstract Texture ImportTexture(Catalog catalog, string Name, string Path);
 		
 		/*
-		public abstract ModelGroup LoadModel(Catalog catalog, string name, string path);
+		public abstract ModelGroup ImportModel(Catalog catalog, string name, string path);
 		
-		public abstract VertexProgram LoadVertexProgram(Catalog catalog, string name, string path);
+		public abstract VertexProgram ImportVertexProgram(Catalog catalog, string name, string path);
 		
-		public abstract FragmentProgram LoadFragmentProgram(Catalog catalog, string name, string path);
+		public abstract FragmentProgram ImportFragmentProgram(Catalog catalog, string name, string path);
 		*/
 	}
 }

@@ -13,12 +13,12 @@ namespace Kinetic.Resource
 		readonly A _asset;
 		readonly L _loader;
 		
-		public CatalogEntry (A asset, L loader)
+		public CatalogEntry (A Asset, L Loader)
 		{
-			_name = asset.Name;
-			_id = asset.ID;
-			_asset = asset;
-			_loader = loader;
+			_name = Asset.Name;
+			_id = Asset.ID;
+			_asset = Asset;
+			_loader = Loader;
 		}
 		
 		public A Asset {

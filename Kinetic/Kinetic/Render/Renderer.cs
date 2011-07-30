@@ -17,6 +17,7 @@
 using System;
 using System.Drawing;
 
+using Kinetic.Resource;
 using Kinetic.Scene;
 
 namespace Kinetic.Render
@@ -24,23 +25,31 @@ namespace Kinetic.Render
 	
 	public abstract class Renderer
 	{
-		/*
+		
+		protected Catalog _catalog;
+		
 		public Renderer ()
 		{
+			_catalog = null;
+		}
+		
+		public Catalog Catalog {
+			get { return _catalog; }
+			set { _catalog = value; }
 		}
 		
 		public abstract int GetWidth();
 		
 		public abstract int GetHeight();
 		
-		public abstract RENDERER_TYPE GetRendererType();
+		public abstract string GetRendererType();
 		
 		public abstract void SetCamera(Camera Camera);
 		
 		public abstract Camera GetCamera();
 		
 		
-		
+		/*
 		/// <summary>
 		/// Events
 		/// </summary>

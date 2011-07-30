@@ -82,12 +82,12 @@ namespace Kinetic.Provide
 		
 		public override void CreateWindow ()
 		{
-			Console.WriteLine(string.Format("Create Display Window ({0}x{1})", Width, Height));
+			//Console.WriteLine(string.Format("Create Display Window ({0}x{1})", Width, Height));
 			if (window != null) {
 				throw new Exception ("Window Already Created.");
 			}
 			window = new OpenTKGameWindow (Width, Height);
-			Console.WriteLine("Create Display Window - Instance Created");
+			//Console.WriteLine("Create Display Window - Instance Created");
 			window.Title = Title;
 			window.Keyboard.KeyDown += new EventHandler<OpenTK.Input.KeyboardKeyEventArgs> (OnKeyDownHandler);
 			window.Keyboard.KeyUp += new EventHandler<OpenTK.Input.KeyboardKeyEventArgs> (OnKeyUpHandler);
@@ -99,7 +99,7 @@ namespace Kinetic.Provide
 			window.Mouse.Move += new EventHandler<OpenTK.Input.MouseMoveEventArgs> (OnMouseMoveHandler);
 			window.Mouse.ButtonDown += new EventHandler<OpenTK.Input.MouseButtonEventArgs> (OnMouseButtonDownHandler);
 			window.Mouse.ButtonUp += new EventHandler<OpenTK.Input.MouseButtonEventArgs> (OnMouseButtonUpHandler);
-			Console.WriteLine("Create Display Window - Events Registered");
+			//Console.WriteLine("Create Display Window - Events Registered");
 			
 			inputRegister = new InputRegister ();
 		}

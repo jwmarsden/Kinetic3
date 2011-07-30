@@ -9,7 +9,7 @@ namespace Kinetic.Provide
 		{
 		}
 		
-		public override Texture ImportTexture(Catalog catalog, string name, string path) {
+		public override Texture ImportTexture(Catalog Catalog, string Name, string Path) {
 			// Check that File Exists
 			
 			// Create Texture Instance
