@@ -15,20 +15,30 @@
  #endregion
 
 using System;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace Kinetic.Resource
 {
 	public class Texture: Asset
 	{
-		string _path;
+		public string _path;
+		public Bitmap _textureBitmap;
 		
 		public Texture ()
 		{
 			_path = null;
+			_textureBitmap = null;
 		}
 		
 		public string Path {
 			get { return _path; }
+			set { _path = value; }
+		}
+		
+		public Bitmap Bitmap {
+			get { return _textureBitmap; }
+			set { _textureBitmap = value; }
 		}
 	}
 }

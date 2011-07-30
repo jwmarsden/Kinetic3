@@ -20,14 +20,16 @@ namespace Kinetic.Resource
 {
 	public class Asset
 	{
-		int _id;
-		string _name;
-		bool _inSystemMemory;
-		bool _inVideoMemory;
+		public int _id;
+		public int _handle;
+		public string _name;
+		public bool _inSystemMemory;
+		public bool _inVideoMemory;
 		
 		public Asset ()
 		{
 			_id = -1;
+			_handle = -1;
 			_name = null;
 			_inSystemMemory = false;
 			_inVideoMemory = false;
@@ -35,18 +37,27 @@ namespace Kinetic.Resource
 		
 		public int ID {
 			get { return _id; }
+			set { _id = value; }
+		}
+		
+		public int Handle {
+			get { return _handle; }
+			set { _handle = value; }
 		}
 		
 		public string Name {
-			get { return _name; }	
+			get { return _name; }
+			set { _name = value; }
 		}
 		
 		public bool InSystemMemory {
 			get { return _inSystemMemory; }	
+			set { _inSystemMemory = value; }
 		}
 		
 		public bool InVideoMemory {
 			get { return _inVideoMemory; }	
+			set { _inVideoMemory = value; }
 		}
 	}
 }

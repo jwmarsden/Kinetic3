@@ -1,14 +1,25 @@
 
 using System;
+using System.Drawing;
 
 using Kinetic.Base;
 using Kinetic.IO;
+using Kinetic.Common;
+using Kinetic.Math;
+using Kinetic.Scene;
 using Kinetic.Resource;
+using Kinetic.Render;
+
+using OpenTK;
+using OpenTK.Graphics;
+using OpenTK.Graphics.OpenGL;
 
 namespace KineticExample
 {
 	public class K3TestApplication1: BaseApplication
 	{
+		Texture kineticMainImageTexture = null;
+		
 		public K3TestApplication1 ()
 		{
 		}
@@ -25,19 +36,14 @@ namespace KineticExample
 			}
 			Console.Write("\r\n");
 			
-			
-			//Renderer renderer = renderers[0];
-			//renderer.SetBackgroundColor(Color.DarkGray);
-			/*
-			handlers = new Handler[1];
-			firstPersonHandler = new FirstPersonHandler(display, renderer);
-			firstPersonHandler.UpDown = true;
-			handlers[0] = firstPersonHandler;
-			*/
-			
+			kineticMainImageTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "KineticBanner.jpg");
 		}
 		
-		public override void Update(long time) {
+		public override void Update(long time) {	
+		}
+		
+		public override void ApplicationRender() {
+			MainRenderer.DrawTexture(kineticMainImageTexture);
 		}
 		
 		public static void Main (string[] args) 

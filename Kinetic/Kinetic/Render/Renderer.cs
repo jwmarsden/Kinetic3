@@ -160,6 +160,7 @@ namespace Kinetic.Render
 		
 		// public abstract void Draw(int XPos, int YPos, <image> image);
 		
+		public abstract void DrawTexture(Texture Texture);
 		
 		/// <summary>
 		/// Resource Management
@@ -167,6 +168,12 @@ namespace Kinetic.Render
 		/**
 		 * Load From Catalog
 		 **/
+		// Load Texture
+		public abstract void LoadTexture(Texture Texture); 
+		
+		// Unload Texture
+				
+		
 		
 		// Load Model
 		
@@ -184,10 +191,6 @@ namespace Kinetic.Render
 		
 		// Unload Int Buffer
 		
-		// Load Texture
-		
-		// Unload Texture
-		
 		// Load Vertex Shader
 		
 		// Unload Vertex Shader
@@ -201,8 +204,10 @@ namespace Kinetic.Render
 		 **/
 		
 		// Enable Texture
+		public abstract void EnableTexture(Texture Texture);
 		
 		// Disable Texture
+		public abstract void DisableTexture();
 		
 		// Enable Vertex Buffer
 		

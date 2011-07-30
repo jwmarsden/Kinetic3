@@ -9,11 +9,9 @@ namespace Kinetic.Resource
 		{
 		}
 		
-		/*
 		public abstract void LoadIntoSystemMemory();
-		
+
 		public abstract void LoadIntoVideoMemory();
-		 */
-		}
+	}
 }
 

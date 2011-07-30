@@ -45,6 +45,7 @@
     <Folder Include="Provider\OpenTK\" />
     <Folder Include="Application\" />
     <Folder Include="Provider\" />
+    <Folder Include="Provider\OpenTK\Loader\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Provider\OpenTK\OpenTKDisplay.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Provider\OpenTK\OpenTKCamera.cs" />
     <Compile Include="Provider\OpenTK\OpenTKResourceManager.cs" />
     <Compile Include="Provider\OpenTKProvider.cs" />
+    <Compile Include="Provider\OpenTK\Loader\OpenTKTextureLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kinetic\Kinetic.csproj">

@@ -106,6 +106,63 @@ namespace Kinetic.Provide
 		public override void ClearBuffers() {
 			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit | ClearBufferMask.StencilBufferBit);
 		}
+		
+		public override void LoadTexture(Texture Texture) {
+			if(!Texture.InSystemMemory) {
+				Loader<Texture> textureLoader = Catalog.FindTextureLoader(Texture.Name);
+				textureLoader.LoadIntoSystemMemory();
+				textureLoader.LoadIntoVideoMemory();
+			}
+			if(!Texture.InVideoMemory) {
+				Loader<Texture> textureLoader = Catalog.FindTextureLoader(Texture.Name);
+				textureLoader.LoadIntoVideoMemory();
+			}
+		}
+		
+		public override void EnableTexture(Texture Texture) {
+			if(!Texture.InVideoMemory) {
+				LoadTexture(Texture);
+			}
+			GL.BindTexture(TextureTarget.Texture2D, Texture.Handle);
+		}
+		
+		public override void DisableTexture() {
+			GL.BindTexture(TextureTarget.Texture2D, -1);
+		}
+		
+		
+		public override void DrawTexture(Texture Texture) {
+			
+			
+			GL.PushMatrix();
+			GL.LoadIdentity();
+			
+			Matrix4 ortho_projection = Matrix4.CreateOrthographicOffCenter(0, 100, 100, 0, -1, 1);
+			GL.MatrixMode(MatrixMode.Projection);
+			
+			GL.PushMatrix();
+			GL.LoadMatrix(ref ortho_projection);
+			
+			GL.Enable(EnableCap.Blend);
+			GL.BlendFunc(BlendingFactorSrc.One, BlendingFactorDest.Zero);
+			EnableTexture(Texture);
+			GL.Enable(EnableCap.Texture2D);
+			
+			GL.Begin(BeginMode.Quads);
+			GL.TexCoord2(0, 0); GL.Vertex2(0, 0);
+			GL.TexCoord2(1, 0); GL.Vertex2(100, 0);
+			GL.TexCoord2(1, 1); GL.Vertex2(100, 100);
+			GL.TexCoord2(0, 1); GL.Vertex2(0, 100);
+			GL.End();
+			GL.PopMatrix();
+			
+			GL.Disable(EnableCap.Blend);
+			GL.Disable(EnableCap.Texture2D);
+			DisableTexture();
+			GL.MatrixMode(MatrixMode.Modelview);
+			GL.PopMatrix();
+			
+		}
 	}
 	
 	

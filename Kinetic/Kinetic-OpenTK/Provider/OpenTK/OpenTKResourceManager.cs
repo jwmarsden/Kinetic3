@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Kinetic.Resource;
 
 namespace Kinetic.Provide
@@ -11,18 +12,23 @@ namespace Kinetic.Provide
 		
 		public override Texture ImportTexture(Catalog Catalog, string Name, string Path) {
 			Console.WriteLine(string.Format("ImportTexture({0},\"{1}\",\"{2}\")", Catalog, Name, Path));
-			// Check that File Exists
 			
-			// Create Texture Instance
+			if(!File.Exists(Path)) {
+				throw new Exception(string.Format("There is no image for \"{0}\" found at the specified path \"{1}\"", Name, Path));
+			}
 			
-			// Create Texture Loader Instance
+			Texture texture = new Texture();
+			texture.ID = 1;
+			texture.Name = Name;
+			texture.Path = Path;
 			
-			// Register with Catalog
+			TextureLoader<Texture> textureLoader = new OpenTKTextureLoader<Texture>(texture);
 			
-			// Return Texture
-			
-			return null;
+			Catalog.RegisterTexture(ref texture, ref textureLoader);
+		
+			return texture;
 		}
+		
 	}
 }
 

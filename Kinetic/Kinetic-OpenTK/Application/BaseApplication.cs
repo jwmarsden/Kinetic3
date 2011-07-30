@@ -93,6 +93,9 @@ namespace Kinetic.Base
 		
 		public abstract void Update(long time);
 		
+		public virtual void ApplicationRender() {
+		}
+		
 		public void start() {
 			CreateDisplays();
 			
@@ -179,6 +182,9 @@ namespace Kinetic.Base
 								}
 							}
 							*/
+							
+							ApplicationRender();
+							
 							display.AfterRender();
 						}
 						renderWatch.Stop();

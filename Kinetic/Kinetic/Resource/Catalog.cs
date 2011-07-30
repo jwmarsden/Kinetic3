@@ -40,7 +40,7 @@ namespace Kinetic.Resource
 			_textureCatalog = new Dictionary<string, CatalogEntry<Texture, TextureLoader<Texture>>>();
 		}
 		
-		public Texture RegisterTexture(Texture texture, TextureLoader<Texture> textureLoader) {
+		public Texture RegisterTexture(ref Texture texture, ref TextureLoader<Texture> textureLoader) {
 			if(_textureList.Contains(texture)) {
 				throw new Exception(string.Format("Texture {0} already registered.", texture));
 			}

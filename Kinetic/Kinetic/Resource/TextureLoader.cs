@@ -2,10 +2,10 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class TextureLoader<A>: Loader<A>
+	public abstract class TextureLoader<A>: Loader<A>
 		where A: Texture
 	{
-		A _texture;
+		protected A _texture;
 		
 		public TextureLoader (A texture)
 		{
@@ -16,7 +16,6 @@ namespace Kinetic.Resource
 			get { return _texture; }
 			set { _texture = value; }
 		}
-		
 	}
 }
 
