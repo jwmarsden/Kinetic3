@@ -18,7 +18,7 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class VertexBuffer: Bindable
+	public class VertexBuffer: Asset
 	{
 		public VertexBuffer ()
 		{

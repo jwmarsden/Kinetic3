@@ -64,7 +64,8 @@ namespace OpenTK
         /// </summary>
         bool Exists { get; }
         
-        /// <summary>
+        
+		/// <summary>
         /// Gets the <see cref="OpenTK.Platform.IWindowInfo"/> for this window.
         /// </summary>
         IWindowInfo WindowInfo { get; }

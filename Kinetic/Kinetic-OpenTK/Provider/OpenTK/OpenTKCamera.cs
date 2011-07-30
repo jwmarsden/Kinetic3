@@ -41,8 +41,9 @@
 
 using System;
 using Kinetic.Math;
+using Kinetic.Render;
 
-namespace Kinetic.Render
+namespace Kinetic.Provide
 {
 	public class OpenTKCamera: Camera
 	{

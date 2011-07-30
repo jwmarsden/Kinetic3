@@ -18,7 +18,7 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class IndiciesBuffer: Bindable
+	public class IndiciesBuffer: Asset
 	{
 		public IndiciesBuffer ()
 		{

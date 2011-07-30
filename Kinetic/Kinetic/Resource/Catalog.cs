@@ -28,63 +28,54 @@ namespace Kinetic.Resource
 	/// statically to this object. Only one catalog can be active for any
 	/// given type at a time.
 	/// </summary>
-	public class Catalog<CatalogType>
+	public class Catalog
 	{
-		/// <summary>
-		/// Storage for the items in the catalog.
-		/// </summary>
-		Dictionary<string, CatalogType> catalogItems;
-		
-		static Catalog<VertexBuffer> vertexBufferCatalog;
-		static Catalog<IndiciesBuffer> indiciesBufferCatalog;
-		static Catalog<Texture> textureCatalog;
-		static Catalog<VertexProgram> vertexProgramCatalog;
-		static Catalog<FragmentProgram> fragmentProgramCatalog;
+		List<Texture> _textureList;
+		Dictionary<string, CatalogEntry<Texture, TextureLoader<Texture>>> _textureCatalog;
+		//Dictionary<string, CatalogEntry<VertexBuffer, VertexBufferLoader>> _vertexBufferCatalog;
 		
 		public Catalog ()
 		{
-			catalogItems = new Dictionary<string, CatalogType>();
-			
-			vertexBufferCatalog = null;
-			indiciesBufferCatalog = null;
-			textureCatalog = null;
-			vertexProgramCatalog = null;
-			fragmentProgramCatalog = null;
+			_textureList = new List<Texture>();	
+			_textureCatalog = new Dictionary<string, CatalogEntry<Texture, TextureLoader<Texture>>>();
 		}
 		
-		public int Count {
-			get { return catalogItems.Count; }	
+		public Texture RegisterTexture(Texture texture, TextureLoader<Texture> textureLoader) {
+			if(_textureList.Contains(texture)) {
+				throw new Exception(string.Format("Texture {0} already registered.", texture));
+			}
+			if(_textureCatalog.ContainsKey(texture.Name)) {
+				throw new Exception(string.Format("A Texture with the Name {0} already exists in this catalog. Cannot insert {1}.", texture.Name, texture));
+			}
+			_textureList.Add(texture);
+			_textureCatalog.Add(
+				texture.Name, 
+			    new CatalogEntry<Texture, TextureLoader<Texture>>(texture, textureLoader)
+			);
+			return texture;
 		}
 		
-		public CatalogType this[string name] {
-			get { return catalogItems[name]; }
-			set { catalogItems[name] = value; }
+		public Texture FindTexture(int id) {
+			Texture texture = _textureList[id];
+			return texture;
 		}
 		
-		static public Catalog<VertexBuffer> VertexBuffers {
-			get { return vertexBufferCatalog; }
-			set { vertexBufferCatalog = value; }
+		public Texture FindTexture(string name) {
+			CatalogEntry<Texture, TextureLoader<Texture>> textureCatalogEntry = _textureCatalog[name];
+			if(textureCatalogEntry != null) {
+				return textureCatalogEntry.Asset;
+			} else {
+				return null;
+			}
 		}
 		
-		static public Catalog<IndiciesBuffer> IndiciesBuffers {
-			get { return indiciesBufferCatalog; }
-			set { indiciesBufferCatalog = value; }
-		}
-		
-		static public Catalog<Texture> Textures {
-			get { return textureCatalog; }
-			set { textureCatalog = value; }
-		}
-
-		static public Catalog<VertexProgram> VertexPrograms {
-			get { return vertexProgramCatalog; }
-			set { vertexProgramCatalog = value; }
-		}
-		
-		static public Catalog<FragmentProgram> FragmentPrograms {
-			get { return fragmentProgramCatalog; }
-			set { fragmentProgramCatalog = value; }
+		public TextureLoader<Texture> FindTextureLoader(string name) {
+			CatalogEntry<Texture, TextureLoader<Texture>> textureCatalogEntry = _textureCatalog[name];
+			if(textureCatalogEntry != null) {
+				return textureCatalogEntry.Loader;
+			} else {
+				return null;
+			}
 		}
 	}
 }
-

@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  <PropertyGroup>    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>    <ProductVersion>9.0.21022</ProductVersion>    <SchemaVersion>2.0</SchemaVersion>    <ProjectGuid>{EA3C1AA0-0EEF-4BD4-9637-F85755CC83CF}</ProjectGuid>    <OutputType>Library</OutputType>    <RootNamespace>Kinetic</RootNamespace>    <AssemblyName>Kinetic</AssemblyName>    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>  </PropertyGroup>  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">    <DebugSymbols>true</DebugSymbols>    <DebugType>full</DebugType>    <Optimize>false</Optimize>    <OutputPath>bin\Debug</OutputPath>    <DefineConstants>DEBUG</DefineConstants>    <ErrorReport>prompt</ErrorReport>    <WarningLevel>4</WarningLevel>    <PlatformTarget>x86</PlatformTarget>    <ConsolePause>false</ConsolePause>  </PropertyGroup>  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">    <DebugType>none</DebugType>    <Optimize>false</Optimize>    <OutputPath>bin\Release</OutputPath>    <ErrorReport>prompt</ErrorReport>    <WarningLevel>4</WarningLevel>    <PlatformTarget>x86</PlatformTarget>    <ConsolePause>false</ConsolePause>  </PropertyGroup>  <ItemGroup>    <Compile Include="Common\Buffer\Buffer.cs" />    <Compile Include="Common\Buffer\DynamicFloatBuffer.cs" />    <Compile Include="Common\Buffer\DynamicIntBuffer.cs" />    <Compile Include="Common\Buffer\FloatBuffer.cs" />    <Compile Include="Common\Buffer\IntBuffer.cs" />    <Compile Include="Common\ColorUtil.cs" />    <Compile Include="IO\Display.cs" />    <Compile Include="IO\InputRegister.cs" />    <Compile Include="IO\Key.cs" />    <Compile Include="IO\Mouse.cs" />    <Compile Include="Render\BoundingBox.cs" />    <Compile Include="Render\Bound.cs" />    <Compile Include="Render\Renderer.cs" />    <Compile Include="Render\Camera.cs" />    <Compile Include="Render\VisibleSet.cs" />    <Compile Include="Render\States.cs" />    <Compile Include="Math\Frustum.cs" />    <Compile Include="Math\Matrix.cs" />    <Compile Include="Math\Plane.cs" />    <Compile Include="Math\Quaternion.cs" />    <Compile Include="Math\QuickMath.cs" />    <Compile Include="Math\Transformation.cs" />    <Compile Include="Math\Vector.cs" />    <Compile Include="Resource\Texture.cs" />    <Compile Include="Resource\VertexProgram.cs" />    <Compile Include="Resource\FragmentProgram.cs" />    <Compile Include="Resource\Bindable.cs" />    <Compile Include="Resource\VertexBuffer.cs" />    <Compile Include="Resource\IndiciesBuffer.cs" />    <Compile Include="Resource\Catalog.cs" />    <Compile Include="Scene\Spatial.cs" />    <Compile Include="Scene\Node.cs" />    <Compile Include="Scene\Geometry.cs" />  </ItemGroup>  <ItemGroup>    <Folder Include="IO\" />    <Folder Include="Render\" />    <Folder Include="Resource\" />    <Folder Include="Scene\" />  </ItemGroup>  <ItemGroup>    <Reference Include="System.Drawing" />  </ItemGroup>  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /></Project>
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA3C1AA0-0EEF-4BD4-9637-F85755CC83CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Kinetic</RootNamespace>
+    <AssemblyName>Kinetic</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Common\Buffer\Buffer.cs" />
+    <Compile Include="Common\Buffer\DynamicFloatBuffer.cs" />
+    <Compile Include="Common\Buffer\DynamicIntBuffer.cs" />
+    <Compile Include="Common\Buffer\FloatBuffer.cs" />
+    <Compile Include="Common\Buffer\IntBuffer.cs" />
+    <Compile Include="Common\ColorUtil.cs" />
+    <Compile Include="IO\Display.cs" />
+    <Compile Include="IO\InputRegister.cs" />
+    <Compile Include="IO\Key.cs" />
+    <Compile Include="IO\Mouse.cs" />
+    <Compile Include="Render\BoundingBox.cs" />
+    <Compile Include="Render\Bound.cs" />
+    <Compile Include="Render\Renderer.cs" />
+    <Compile Include="Render\Camera.cs" />
+    <Compile Include="Render\VisibleSet.cs" />
+    <Compile Include="Render\States.cs" />
+    <Compile Include="Math\Frustum.cs" />
+    <Compile Include="Math\Matrix.cs" />
+    <Compile Include="Math\Plane.cs" />
+    <Compile Include="Math\Quaternion.cs" />
+    <Compile Include="Math\QuickMath.cs" />
+    <Compile Include="Math\Transformation.cs" />
+    <Compile Include="Math\Vector.cs" />
+    <Compile Include="Resource\Texture.cs" />
+    <Compile Include="Resource\VertexProgram.cs" />
+    <Compile Include="Resource\FragmentProgram.cs" />
+    <Compile Include="Resource\VertexBuffer.cs" />
+    <Compile Include="Resource\IndiciesBuffer.cs" />
+    <Compile Include="Resource\Catalog.cs" />
+    <Compile Include="Scene\Spatial.cs" />
+    <Compile Include="Scene\Node.cs" />
+    <Compile Include="Scene\Geometry.cs" />
+    <Compile Include="Resource\Loader.cs" />
+    <Compile Include="Resource\TextureLoader.cs" />
+    <Compile Include="Resource\ResourceManager.cs" />
+    <Compile Include="Resource\ModelGroup.cs" />
+    <Compile Include="Resource\ModelObject.cs" />
+    <Compile Include="Resource\Asset.cs" />
+    <Compile Include="Resource\CatalogEntry.cs" />
+    <Compile Include="Provider\Provider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IO\" />
+    <Folder Include="Render\" />
+    <Folder Include="Resource\" />
+    <Folder Include="Scene\" />
+    <Folder Include="Provider\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

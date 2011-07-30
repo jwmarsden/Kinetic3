@@ -47,12 +47,13 @@ using Kinetic.Common;
 using Kinetic.Math;
 using Kinetic.Scene;
 using Kinetic.Resource;
+using Kinetic.Render;
 
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 
-namespace Kinetic.Render
+namespace Kinetic.Provide
 {
 	public class OpenTKRenderer : Renderer
 	{

@@ -52,7 +52,7 @@ using OpenTK.Input;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 
-namespace Kinetic.IO
+namespace Kinetic.Provide
 {
 	public class OpenTKDisplay : Display
 	{
@@ -82,10 +82,12 @@ namespace Kinetic.IO
 		
 		public override void CreateWindow ()
 		{
+			Console.WriteLine(string.Format("Create Display Window ({0}x{1})", Width, Height));
 			if (window != null) {
 				throw new Exception ("Window Already Created.");
 			}
 			window = new OpenTKGameWindow (Width, Height);
+			Console.WriteLine("Create Display Window - Instance Created");
 			window.Title = Title;
 			window.Keyboard.KeyDown += new EventHandler<OpenTK.Input.KeyboardKeyEventArgs> (OnKeyDownHandler);
 			window.Keyboard.KeyUp += new EventHandler<OpenTK.Input.KeyboardKeyEventArgs> (OnKeyUpHandler);
@@ -97,7 +99,7 @@ namespace Kinetic.IO
 			window.Mouse.Move += new EventHandler<OpenTK.Input.MouseMoveEventArgs> (OnMouseMoveHandler);
 			window.Mouse.ButtonDown += new EventHandler<OpenTK.Input.MouseButtonEventArgs> (OnMouseButtonDownHandler);
 			window.Mouse.ButtonUp += new EventHandler<OpenTK.Input.MouseButtonEventArgs> (OnMouseButtonUpHandler);
-		
+			Console.WriteLine("Create Display Window - Events Registered");
 			
 			inputRegister = new InputRegister ();
 		}
@@ -268,22 +270,22 @@ namespace Kinetic.IO
 		protected void OnMouseButtonDownHandler (object sender, OpenTK.Input.MouseButtonEventArgs e)
 		{
 			if (e.Button == OpenTK.Input.MouseButton.Left) {
-				InputRegister.MouseButtonDownInput (MouseButton.Left, e.X, e.Y);
+				InputRegister.MouseButtonDownInput (Kinetic.IO.MouseButton.Left, e.X, e.Y);
 			} else if (e.Button == OpenTK.Input.MouseButton.Middle) {
-				InputRegister.MouseButtonDownInput (MouseButton.Middle, e.X, e.Y);
+				InputRegister.MouseButtonDownInput (Kinetic.IO.MouseButton.Middle, e.X, e.Y);
 			} else if (e.Button == OpenTK.Input.MouseButton.Right) {
-				InputRegister.MouseButtonDownInput (MouseButton.Right, e.X, e.Y);
+				InputRegister.MouseButtonDownInput (Kinetic.IO.MouseButton.Right, e.X, e.Y);
 			}
 		}
 
 		protected void OnMouseButtonUpHandler (object sender, OpenTK.Input.MouseButtonEventArgs e)
 		{
 			if (e.Button == OpenTK.Input.MouseButton.Left) {
-				InputRegister.MouseButtonUpInput (MouseButton.Left, e.X, e.Y);
+				InputRegister.MouseButtonUpInput (Kinetic.IO.MouseButton.Left, e.X, e.Y);
 			} else if (e.Button == OpenTK.Input.MouseButton.Middle) {
-				InputRegister.MouseButtonUpInput (MouseButton.Middle, e.X, e.Y);
+				InputRegister.MouseButtonUpInput (Kinetic.IO.MouseButton.Middle, e.X, e.Y);
 			} else if (e.Button == OpenTK.Input.MouseButton.Right) {
-				InputRegister.MouseButtonUpInput (MouseButton.Right, e.X, e.Y);
+				InputRegister.MouseButtonUpInput (Kinetic.IO.MouseButton.Right, e.X, e.Y);
 			}
 		}
 		

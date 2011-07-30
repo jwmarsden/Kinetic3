@@ -49,7 +49,7 @@ using OpenTK.Input;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
 
-namespace Kinetic.IO
+namespace Kinetic.Provide
 {
 	public class OpenTKGameWindow : NativeWindow, IDisposable
 	{
@@ -174,8 +174,8 @@ namespace Kinetic.IO
 				VSync = VSyncMode.On;
 				
 				//glWindow.WindowInfoChanged += delegate(object sender, EventArgs e) { OnWindowInfoChangedInternal(e); };
-			} catch (Exception) {
-				//Debug.Print (e.ToString ());
+			} catch (Exception e) {
+				Console.WriteLine(e.StackTrace);
 				base.Dispose ();
 				throw;
 			}

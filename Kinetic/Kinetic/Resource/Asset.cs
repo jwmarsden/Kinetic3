@@ -18,24 +18,35 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class Bindable
+	public class Asset
 	{
-		int id;
-		bool loaded;
+		int _id;
+		string _name;
+		bool _inSystemMemory;
+		bool _inVideoMemory;
 		
-		public Bindable ()
+		public Asset ()
 		{
-			id = -1;
-			loaded = false;
+			_id = -1;
+			_name = null;
+			_inSystemMemory = false;
+			_inVideoMemory = false;
 		}
 		
 		public int ID {
-			get { return id; }
-			set { id = value; }
+			get { return _id; }
 		}
 		
-		public bool Loaded {
-			get { return loaded; }	
+		public string Name {
+			get { return _name; }	
+		}
+		
+		public bool InSystemMemory {
+			get { return _inSystemMemory; }	
+		}
+		
+		public bool InVideoMemory {
+			get { return _inVideoMemory; }	
 		}
 	}
 }

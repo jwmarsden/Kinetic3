@@ -18,7 +18,7 @@ using System;
 
 namespace Kinetic.Resource
 {
-	public class FragmentProgram: Bindable
+	public class FragmentProgram: Asset
 	{
 		public FragmentProgram ()
 		{

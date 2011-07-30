@@ -27,6 +27,7 @@ namespace Kinetic.Render
 	
 	public abstract class Renderer
 	{
+		/*
 		public Renderer ()
 		{
 		}
@@ -57,10 +58,11 @@ namespace Kinetic.Render
 		/// <summary>
 		/// Global State Management
 		/// </summary>
+		/*
 		public abstract void SetColor(Color Color);
 		
 		public abstract Color GetColor();
-		
+		*/
 		
 		// Shitloads of stuff
 		
@@ -68,6 +70,7 @@ namespace Kinetic.Render
 		/// <summary>
 		/// Buffer management
 		/// </summary>
+		/*
 		public abstract void ClearBackBuffer();
 		
 		public abstract void ClearZBuffer();
@@ -91,11 +94,12 @@ namespace Kinetic.Render
 			ClearZBuffer(XPos, YPos, Width, Height);
 			ClearStencilBuffer(XPos, YPos, Width, Height);
 		}
-		
+		*/
 		/// <summary>
 		/// Scene management
 		/// </summary>
 		
+		/*
 		public virtual void BeginScene() {}
 		
 		public virtual void EndScene() {}
@@ -104,6 +108,9 @@ namespace Kinetic.Render
 		
 		public abstract void Draw(Geometry Geometry);
 		
+		
+		*/
+			
 		// public abstract void ApplyEffect(ShaderEffect ShaderEffect, bool PrimaryEffect);
 		
 		

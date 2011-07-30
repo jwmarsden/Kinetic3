@@ -22,42 +22,15 @@ using Kinetic.Resource;
 
 namespace Kinetic
 {
-	public enum ProviderSelection {
-		OpenTK = 0
-	}
-
-	public sealed class Provider
+	public abstract class Provider
 	{
-		static readonly Provider instance = new Provider();
-		
-		ProviderSelection providerSelection;
-		
-		//ResourceManager resourceManager = null;
-		
-		static Provider() {
+		public Provider() {
 		}
+
+		public abstract Display CreateDisplay ();
 		
-		Provider () {
-			providerSelection = ProviderSelection.OpenTK;
-		}
+		public abstract ResourceManager CreateResourceManager();
 		
-		public static Provider Instance {
-			get { return instance; }	
-		}
-		
-		public ProviderSelection ProviderSelection {
-			get { return providerSelection; }
-			set { providerSelection = value; }
-		}
-		
-		public Display CreateDisplay ()
-		{
-			switch(providerSelection) {
-			case ProviderSelection.OpenTK:
-				return new OpenTKDisplay();
-			}
-			return null;
-		}
 		/*
 		public Renderer CreateRenderer (Display display)
 		{

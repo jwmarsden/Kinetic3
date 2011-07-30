@@ -55,7 +55,7 @@ namespace Kinetic.Base
 		
 		public BaseApplication ()
 		{
-			provider = Provider.Instance;
+			provider = new Kinetic.Provide.OpenTKProvider();
 			displays = null;
 			renderers = null;
 			//handlers = null;
@@ -201,6 +201,7 @@ namespace Kinetic.Base
 			displays[mainDisplay].Width = 800;
 			displays[mainDisplay].Height = 600;
 			displays[mainDisplay].CreateWindow();
+			Console.WriteLine("Main Display Window Created.");
 		}	
 		
 		public virtual void CreateRenderers() {
