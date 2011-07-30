@@ -22,14 +22,24 @@ using Kinetic.Scene;
 
 namespace Kinetic.Render
 {
-	
 	public abstract class Renderer
 	{
+		protected int _x;
+		protected int _y;
+		protected int _width;
+		protected int _height;
+
+		protected Color _background;
 		
 		protected Catalog _catalog;
 		
 		public Renderer ()
 		{
+			_x = -1;
+			_y = -1;
+			_width = -1;
+			_height = -1;
+			_background = Color.Gray;
 			_catalog = null;
 		}
 		
@@ -38,16 +48,37 @@ namespace Kinetic.Render
 			set { _catalog = value; }
 		}
 		
-		public abstract int GetWidth();
+		public int X {
+			get { return _x; }
+		}
 		
-		public abstract int GetHeight();
+		public int Y {
+			get { return _y; }
+		}
+		
+		public int Width {
+			get { return _width; }
+		}
+		
+		public int Height {
+			get { return _height; }
+		}
+
+		public int GetRenderWidth() {
+			return _width - _x;
+		}
+		
+		public int GetRenderHeight() {
+			return _height - _y;	
+		}
 		
 		public abstract string GetRendererType();
+		
+		public abstract Camera CreateCamera(int width, int height);
 		
 		public abstract void SetCamera(Camera Camera);
 		
 		public abstract Camera GetCamera();
-		
 		
 		/*
 		/// <summary>
