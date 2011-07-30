@@ -47,7 +47,7 @@ namespace Kinetic.Provide
 {
 	public class OpenTKCamera: Camera
 	{
-		public OpenTKCamera ()
+		public OpenTKCamera (int width, int height): base(width, height)
 		{
 		}
 	}

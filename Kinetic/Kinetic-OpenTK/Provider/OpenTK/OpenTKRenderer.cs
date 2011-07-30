@@ -67,16 +67,13 @@ namespace Kinetic.Provide
 			_nullScene = false;
 		}
 		
-		public override int GetWidth() {
-			return -1;
-		}
-		
-		public override int GetHeight() {
-			return -1;
-		}
-		
 		public override string GetRendererType() {
 			return "OpenTK";
+		}
+		
+		public override Camera CreateCamera(int width, int height) {
+			_camera = new OpenTKCamera(width, height);
+			return _camera;
 		}
 		
 		public override void SetCamera(Camera Camera) {
@@ -90,7 +87,6 @@ namespace Kinetic.Provide
 		public override Camera GetCamera() {
 			return _camera;
 		}
-		
 		
 		/// <summary>
 		/// Buffer management
