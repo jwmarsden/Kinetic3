@@ -175,10 +175,14 @@ namespace Kinetic.Provide
 			if (closing || !window.Exists) {
 				return;
 			}
-			window.Context.MakeCurrent (window.WindowInfo);
+			try {
+				window.Context.MakeCurrent (window.WindowInfo);
+			} catch {
+				closing = true;
+				return;
+			}
 			if (check) {
 				window.Title = Title;
-				//GL.ClearColor (BackgroundColor);
 				check = false;
 			}
 		}

@@ -34,15 +34,15 @@ namespace KineticExample
 				Console.Write(string.Format("{0}", extension));	
 			}
 			Console.Write("\r\n");
-			
-			_kineticBannerTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "KineticBanner.jpg");
+			_kineticBannerTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "Resources/KineticBanner.jpg");
 		}
 		
 		public override void Update(long time) {	
 		}
 		
 		public override void ApplicationRender() {
-			MainRenderer.DrawTexture(_kineticBannerTexture);
+			MainRenderer.Draw(_kineticBannerTexture,50,50,120,100);
+			MainRenderer.Draw(0, 0, Color.Red, "This is not Art!");
 		}
 		
 		public static void Main (string[] args) 

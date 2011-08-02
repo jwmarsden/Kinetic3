@@ -1,18 +1,32 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs" ctype="Workbench">
+    <Files>
+      <File FileName="Kinetic/Kinetic-Example/K3TestApplication1.cs" Line="45" Column="37" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs" Line="200" Column="34" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/Loader/OpenTKTextureLoader.cs" Line="37" Column="16" />
+      <File FileName="Kinetic/Kinetic/Render/Renderer.cs" Line="170" Column="74" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Application/BaseApplication.cs" Line="175" Column="15" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKDisplay.cs" Line="43" Column="22" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKGameWindow.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKResourceManager.cs" Line="35" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Kinetic" expanded="True">
             <Node name="Kinetic" expanded="True">
-              <Node name="Provider" expanded="True" />
+              <Node name="Render" expanded="True" />
             </Node>
-            <Node name="Kinetic-Example" expanded="True">
-              <Node name="K3TestApplication1.cs" selected="True" />
-            </Node>
+            <Node name="Kinetic-Example" expanded="True" />
             <Node name="Kinetic-OpenTK" expanded="True">
               <Node name="Application" expanded="True" />
+              <Node name="Provider" expanded="True">
+                <Node name="OpenTK" expanded="True">
+                  <Node name="Loader" expanded="True" />
+                  <Node name="OpenTKRenderer.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>

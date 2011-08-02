@@ -234,8 +234,14 @@ namespace Kinetic.Base
 		public virtual void CreateRenderers() {
 			Console.WriteLine("Creating Main Renderer.");
 			_renderers = new Renderer[1];
-			_renderers[_mainRenderer] = _provider.CreateRenderer();
-			_renderers[_mainRenderer].Catalog = new Catalog();
+			Renderer renderer = _provider.CreateRenderer();
+			renderer._x = 0;
+			renderer._y = 0;
+			renderer._width = MainDisplay.Width;
+			renderer._height = MainDisplay.Height;
+			renderer._catalog = new Catalog();
+			_renderers[_mainRenderer] = renderer;
+
 			
 			//renderers[mainRenderer].Initialize();
 		}
