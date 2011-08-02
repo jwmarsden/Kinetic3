@@ -1,1 +1,280 @@
-<?xml version="1.0" encoding="utf-8"?><Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  <PropertyGroup>    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>    <ProductVersion>9.0.21022</ProductVersion>    <SchemaVersion>2.0</SchemaVersion>    <ProjectGuid>{3C12E159-2291-4A51-BF66-62EA05A465FE}</ProjectGuid>    <OutputType>Library</OutputType>    <RootNamespace>OpenTK</RootNamespace>    <AssemblyName>OpenTK</AssemblyName>    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>  </PropertyGroup>  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">    <DebugSymbols>true</DebugSymbols>    <DebugType>full</DebugType>    <Optimize>true</Optimize>    <OutputPath>bin\Debug</OutputPath>    <DefineConstants>DEBUG</DefineConstants>    <ErrorReport>prompt</ErrorReport>    <WarningLevel>0</WarningLevel>    <ConsolePause>false</ConsolePause>    <PlatformTarget>x86</PlatformTarget>    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>  </PropertyGroup>  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">    <DebugType>none</DebugType>    <Optimize>false</Optimize>    <OutputPath>bin\Release</OutputPath>    <ErrorReport>prompt</ErrorReport>    <WarningLevel>0</WarningLevel>    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>    <PlatformTarget>x86</PlatformTarget>    <ConsolePause>false</ConsolePause>  </PropertyGroup>  <ItemGroup>    <Compile Include="GLControl\CarbonGLControl.cs" />    <Compile Include="GLControl\DummyGLControl.cs" />    <Compile Include="GLControl\GLControl.cs" />    <Compile Include="GLControl\GLControl.Designer.cs" />    <Compile Include="GLControl\GLControlFactory.cs" />    <Compile Include="GLControl\IGLControl.cs" />    <Compile Include="GLControl\WinGLControl.cs" />    <Compile Include="GLControl\X11GLControl.cs" />    <Compile Include="OpenTK\Audio\OpenAL\AL\AL.cs" />    <Compile Include="OpenTK\Audio\OpenAL\AL\ALEnums.cs" />    <Compile Include="OpenTK\Audio\OpenAL\AL\EffectsExtension.cs" />    <Compile Include="OpenTK\Audio\OpenAL\AL\EffectsExtensionEnums.cs" />    <Compile Include="OpenTK\Audio\OpenAL\AL\EffectsExtensionPresets.cs" />    <Compile Include="OpenTK\Audio\OpenAL\AL\XRamExtension.cs" />    <Compile Include="OpenTK\Audio\OpenAL\Alc\Alc.cs" />    <Compile Include="OpenTK\Audio\OpenAL\Alc\AlcEnums.cs" />    <Compile Include="OpenTK\Audio\AudioCapture.cs" />    <Compile Include="OpenTK\Audio\AudioContext.cs" />    <Compile Include="OpenTK\Audio\AudioContextException.cs" />    <Compile Include="OpenTK\Audio\AudioDeviceEnumerator.cs" />    <Compile Include="OpenTK\Audio\AudioDeviceErrorChecker.cs" />    <Compile Include="OpenTK\Audio\AudioDeviceException.cs" />    <Compile Include="OpenTK\Audio\AudioException.cs" />    <Compile Include="OpenTK\Audio\AudioValueException.cs" />    <Compile Include="OpenTK\Compute\CL10\CL.cs" />    <Compile Include="OpenTK\Compute\CL10\CLHelper.cs" />    <Compile Include="OpenTK\Compute\CL10\Core.cs" />    <Compile Include="OpenTK\Compute\CL10\Delegates.cs" />    <Compile Include="OpenTK\Compute\CL10\Enums.cs" />    <Compile Include="OpenTK\Compute\CL10\ErrorHelper.cs" />    <Compile Include="OpenTK\Compute\CL10\ImageFormat.cs" />    <Compile Include="OpenTK\Compute\CLHelper.cs" />    <Compile Include="OpenTK\Compute\CommandQueue.cs" />    <Compile Include="OpenTK\Compute\ComputeContext.cs" />    <Compile Include="OpenTK\Compute\Configuration.cs" />    <Compile Include="OpenTK\Compute\Device.cs" />    <Compile Include="OpenTK\Compute\Enums.cs" />    <Compile Include="OpenTK\Compute\Event.cs" />    <Compile Include="OpenTK\Compute\Kernel.cs" />    <Compile Include="OpenTK\Compute\Memory.cs" />    <Compile Include="OpenTK\Compute\Platform.cs" />    <Compile Include="OpenTK\Compute\Profiler.cs" />    <Compile Include="OpenTK\Compute\Program.cs" />    <Compile Include="OpenTK\Compute\Sampler.cs" />    <Compile Include="OpenTK\Compute\Structs.cs" />    <Compile Include="OpenTK\Graphics\ES10\Core.cs" />    <Compile Include="OpenTK\Graphics\ES10\Delegates.cs" />    <Compile Include="OpenTK\Graphics\ES10\Enums.cs" />    <Compile Include="OpenTK\Graphics\ES10\ErrorHelper.cs" />    <Compile Include="OpenTK\Graphics\ES10\ES.cs" />    <Compile Include="OpenTK\Graphics\ES10\Helper.cs" />    <Compile Include="OpenTK\Graphics\ES11\Core.cs" />    <Compile Include="OpenTK\Graphics\ES11\Delegates.cs" />    <Compile Include="OpenTK\Graphics\ES11\Enums.cs" />    <Compile Include="OpenTK\Graphics\ES11\ErrorHelper.cs" />    <Compile Include="OpenTK\Graphics\ES11\ES.cs" />    <Compile Include="OpenTK\Graphics\ES11\Helper.cs" />    <Compile Include="OpenTK\Graphics\ES20\Core.cs" />    <Compile Include="OpenTK\Graphics\ES20\Delegates.cs" />    <Compile Include="OpenTK\Graphics\ES20\Enums.cs" />    <Compile Include="OpenTK\Graphics\ES20\ErrorHelper.cs" />    <Compile Include="OpenTK\Graphics\ES20\ES.cs" />    <Compile Include="OpenTK\Graphics\ES20\Helper.cs" />    <Compile Include="OpenTK\Graphics\OpenGL\ErrorHelper.cs" />    <Compile Include="OpenTK\Graphics\OpenGL\GL.cs" />    <Compile Include="OpenTK\Graphics\OpenGL\GLCore.cs" />    <Compile Include="OpenTK\Graphics\OpenGL\GLDelegates.cs" />    <Compile Include="OpenTK\Graphics\OpenGL\GLEnums.cs" />    <Compile Include="OpenTK\Graphics\OpenGL\GLHelper.cs" />    <Compile Include="OpenTK\Graphics\Color4.cs" />    <Compile Include="OpenTK\Graphics\ColorFormat.cs" />    <Compile Include="OpenTK\Graphics\GraphicsBindingsBase.cs" />    <Compile Include="OpenTK\Graphics\GraphicsContext.cs" />    <Compile Include="OpenTK\Graphics\GraphicsContextBase.cs" />    <Compile Include="OpenTK\Graphics\GraphicsContextException.cs" />    <Compile Include="OpenTK\Graphics\GraphicsContextFlags.cs" />    <Compile Include="OpenTK\Graphics\GraphicsContextMissingException.cs" />    <Compile Include="OpenTK\Graphics\GraphicsContextVersion.cs" />    <Compile Include="OpenTK\Graphics\GraphicsErrorException.cs" />    <Compile Include="OpenTK\Graphics\GraphicsExceptions.cs" />    <Compile Include="OpenTK\Graphics\GraphicsMode.cs" />    <Compile Include="OpenTK\Graphics\GraphicsModeComparer.cs" />    <Compile Include="OpenTK\Graphics\GraphicsModeException.cs" />    <Compile Include="OpenTK\Graphics\IGraphicsContext.cs" />    <Compile Include="OpenTK\Graphics\IGraphicsMode.cs" />    <Compile Include="OpenTK\Input\ButtonState.cs" />    <Compile Include="OpenTK\Input\GamePad.cs" />    <Compile Include="OpenTK\Input\GamePadState.cs" />    <Compile Include="OpenTK\Input\IGamePadDriver.cs" />    <Compile Include="OpenTK\Input\IInputDevice.cs" />    <Compile Include="OpenTK\Input\IInputDriver.cs" />    <Compile Include="OpenTK\Input\IInputDriver2.cs" />    <Compile Include="OpenTK\Input\IJoystickDriver.cs" />    <Compile Include="OpenTK\Input\IKeyboardDriver.cs" />    <Compile Include="OpenTK\Input\IKeyboardDriver2.cs" />    <Compile Include="OpenTK\Input\IMouseDriver.cs" />    <Compile Include="OpenTK\Input\IMouseDriver2.cs" />    <Compile Include="OpenTK\Input\JoystickDevice.cs" />    <Compile Include="OpenTK\Input\Key.cs" />    <Compile Include="OpenTK\Input\Keyboard.cs" />    <Compile Include="OpenTK\Input\KeyboardDevice.cs" />    <Compile Include="OpenTK\Input\KeyboardKeyEventArgs.cs" />    <Compile Include="OpenTK\Input\KeyboardState.cs" />    <Compile Include="OpenTK\Input\Mouse.cs" />    <Compile Include="OpenTK\Input\MouseButton.cs" />    <Compile Include="OpenTK\Input\MouseDevice.cs" />    <Compile Include="OpenTK\Input\MouseState.cs" />    <Compile Include="OpenTK\Math\BezierCurve.cs" />    <Compile Include="OpenTK\Math\BezierCurveCubic.cs" />    <Compile Include="OpenTK\Math\BezierCurveQuadric.cs" />    <Compile Include="OpenTK\Math\Box2.cs" />    <Compile Include="OpenTK\Math\Functions.cs" />    <Compile Include="OpenTK\Math\Half.cs" />    <Compile Include="OpenTK\Math\MathHelper.cs" />    <Compile Include="OpenTK\Math\Matrix3d.cs" />    <Compile Include="OpenTK\Math\Matrix4.cs" />    <Compile Include="OpenTK\Math\Matrix4d.cs" />    <Compile Include="OpenTK\Math\Point.cs" />    <Compile Include="OpenTK\Math\Quaternion.cs" />    <Compile Include="OpenTK\Math\Quaterniond.cs" />    <Compile Include="OpenTK\Math\Rectangle.cs" />    <Compile Include="OpenTK\Math\Size.cs" />    <Compile Include="OpenTK\Math\Vector2.cs" />    <Compile Include="OpenTK\Math\Vector2d.cs" />    <Compile Include="OpenTK\Math\Vector2h.cs" />    <Compile Include="OpenTK\Math\Vector3.cs" />    <Compile Include="OpenTK\Math\Vector3d.cs" />    <Compile Include="OpenTK\Math\Vector3h.cs" />    <Compile Include="OpenTK\Math\Vector4.cs" />    <Compile Include="OpenTK\Math\Vector4d.cs" />    <Compile Include="OpenTK\Math\Vector4h.cs" />    <Compile Include="OpenTK\Platform\Dummy\DummyGLContext.cs" />    <Compile Include="OpenTK\Platform\Dummy\DummyWindowInfo.cs" />    <Compile Include="OpenTK\Platform\Egl\Egl.cs" />    <Compile Include="OpenTK\Platform\Egl\EglContext.cs" />    <Compile Include="OpenTK\Platform\Egl\EglGraphicsMode.cs" />    <Compile Include="OpenTK\Platform\Egl\EglMacPlatformFactory.cs" />    <Compile Include="OpenTK\Platform\Egl\EglWindowInfo.cs" />    <Compile Include="OpenTK\Platform\Egl\EglWinPlatformFactory.cs" />    <Compile Include="OpenTK\Platform\Egl\EglX11PlatformFactory.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\Agl.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\CarbonAPI.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\CoreFoundation.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\MacOSKeys.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\QuartzDisplayServicesAPI.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\SpeechChannel.cs" />    <Compile Include="OpenTK\Platform\MacOS\AglContext.cs" />    <Compile Include="OpenTK\Platform\MacOS\Application.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonGLNative.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonInput.cs" />    <Compile Include="OpenTK\Platform\MacOS\CarbonWindowInfo.cs" />    <Compile Include="OpenTK\Platform\MacOS\EventInfo.cs" />    <Compile Include="OpenTK\Platform\MacOS\HIDInput.cs" />    <Compile Include="OpenTK\Platform\MacOS\MacOSException.cs" />    <Compile Include="OpenTK\Platform\MacOS\MacOSFactory.cs" />    <Compile Include="OpenTK\Platform\MacOS\MacOSGraphicsMode.cs" />    <Compile Include="OpenTK\Platform\MacOS\MacOSKeyMap.cs" />    <Compile Include="OpenTK\Platform\MacOS\QuartzDisplayDeviceDriver.cs" />    <Compile Include="OpenTK\Platform\Windows\Bindings\Wgl.cs" />    <Compile Include="OpenTK\Platform\Windows\Bindings\WglCore.cs" />    <Compile Include="OpenTK\Platform\Windows\Bindings\WglDelegates.cs" />    <Compile Include="OpenTK\Platform\Windows\Bindings\WglEnums.cs" />    <Compile Include="OpenTK\Platform\Windows\API.cs" />    <Compile Include="OpenTK\Platform\Windows\WglHelper.cs" />    <Compile Include="OpenTK\Platform\Windows\WinDisplayDevice.cs" />    <Compile Include="OpenTK\Platform\Windows\WinFactory.cs" />    <Compile Include="OpenTK\Platform\Windows\WinGLContext.cs" />    <Compile Include="OpenTK\Platform\Windows\WinGLNative.cs" />    <Compile Include="OpenTK\Platform\Windows\WinGraphicsMode.cs" />    <Compile Include="OpenTK\Platform\Windows\WinInputBase.cs" />    <Compile Include="OpenTK\Platform\Windows\WinKeyMap.cs" />    <Compile Include="OpenTK\Platform\Windows\WinMMJoystick.cs" />    <Compile Include="OpenTK\Platform\Windows\WinRawInput.cs" />    <Compile Include="OpenTK\Platform\Windows\WinRawKeyboard.cs" />    <Compile Include="OpenTK\Platform\Windows\WinRawMouse.cs" />    <Compile Include="OpenTK\Platform\Windows\WinWindowInfo.cs" />    <Compile Include="OpenTK\Platform\Windows\WMInput.cs" />    <Compile Include="OpenTK\Platform\X11\Bindings\Glx.cs" />    <Compile Include="OpenTK\Platform\X11\API.cs" />    <Compile Include="OpenTK\Platform\X11\Functions.cs" />    <Compile Include="OpenTK\Platform\X11\GlxHelper.cs" />    <Compile Include="OpenTK\Platform\X11\Structs.cs" />    <Compile Include="OpenTK\Platform\X11\X11DisplayDevice.cs" />    <Compile Include="OpenTK\Platform\X11\X11Factory.cs" />    <Compile Include="OpenTK\Platform\X11\X11GLContext.cs" />    <Compile Include="OpenTK\Platform\X11\X11GLNative.cs" />    <Compile Include="OpenTK\Platform\X11\X11GraphicsMode.cs" />    <Compile Include="OpenTK\Platform\X11\X11Input.cs" />    <Compile Include="OpenTK\Platform\X11\X11Joystick.cs" />    <Compile Include="OpenTK\Platform\X11\X11Keyboard.cs" />    <Compile Include="OpenTK\Platform\X11\X11KeyMap.cs" />    <Compile Include="OpenTK\Platform\X11\X11Mouse.cs" />    <Compile Include="OpenTK\Platform\X11\X11WindowInfo.cs" />    <Compile Include="OpenTK\Platform\X11\XI2Mouse.cs" />    <Compile Include="OpenTK\Platform\DesktopGraphicsContext.cs" />    <Compile Include="OpenTK\Platform\DisplayDeviceBase.cs" />    <Compile Include="OpenTK\Platform\EmbeddedGraphicsContext.cs" />    <Compile Include="OpenTK\Platform\Factory.cs" />    <Compile Include="OpenTK\Platform\IDisplayDeviceDriver.cs" />    <Compile Include="OpenTK\Platform\INativeGLWindow.cs" />    <Compile Include="OpenTK\Platform\IPlatformFactory.cs" />    <Compile Include="OpenTK\Platform\IWindowInfo.cs" />    <Compile Include="OpenTK\Platform\PlatformException.cs" />    <Compile Include="OpenTK\Platform\Utilities.cs" />    <Compile Include="OpenTK\Properties\AssemblyInfo.cs" />    <Compile Include="OpenTK\Properties\Resources.Designer.cs" />    <Compile Include="OpenTK\AutoGeneratedAttribute.cs" />    <Compile Include="OpenTK\BindingsBase.cs" />    <Compile Include="OpenTK\BlittableValueType.cs" />    <Compile Include="OpenTK\Configuration.cs" />    <Compile Include="OpenTK\ContextHandle.cs" />    <Compile Include="OpenTK\DisplayDevice.cs" />    <Compile Include="OpenTK\DisplayIndex.cs" />    <Compile Include="OpenTK\DisplayResolution.cs" />    <Compile Include="OpenTK\Exceptions.cs" />    <Compile Include="OpenTK\FrameEventArgs.cs" />    <Compile Include="OpenTK\GameWindow.cs" />    <Compile Include="OpenTK\GameWindowFlags.cs" />    <Compile Include="OpenTK\IGameWindow.cs" />    <Compile Include="OpenTK\INativeWindow.cs" />    <Compile Include="OpenTK\IntPtrEqualityComparer.cs" />    <Compile Include="OpenTK\KeyPressEventArgs.cs" />    <Compile Include="OpenTK\Minimal.cs" />    <Compile Include="OpenTK\NativeWindow.cs" />    <Compile Include="OpenTK\Toolkit.cs" />    <Compile Include="OpenTK\WindowBorder.cs" />    <Compile Include="OpenTK\WindowState.cs" />  </ItemGroup>  <ItemGroup>    <None Include="OpenTK\Properties\Resources.resx" />    <None Include="OpenTK\OpenTK.csproj" />    <None Include="OpenTK\OpenTK.dll.config" />  </ItemGroup>  <ItemGroup>    <Reference Include="System.Xml" />    <Reference Include="System" />    <Reference Include="System.Drawing" />    <Reference Include="System.Windows.Forms" />    <Reference Include="System.Data" />    <Reference Include="System.Xml.Linq" />    <Reference Include="System.Core" />  </ItemGroup>  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /></Project>
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C12E159-2291-4A51-BF66-62EA05A465FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OpenTK</RootNamespace>
+    <AssemblyName>OpenTK</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GLControl\CarbonGLControl.cs" />
+    <Compile Include="GLControl\DummyGLControl.cs" />
+    <Compile Include="GLControl\GLControl.cs" />
+    <Compile Include="GLControl\GLControl.Designer.cs" />
+    <Compile Include="GLControl\GLControlFactory.cs" />
+    <Compile Include="GLControl\IGLControl.cs" />
+    <Compile Include="GLControl\WinGLControl.cs" />
+    <Compile Include="GLControl\X11GLControl.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\AL\AL.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\AL\ALEnums.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\AL\EffectsExtension.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\AL\EffectsExtensionEnums.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\AL\EffectsExtensionPresets.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\AL\XRamExtension.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\Alc\Alc.cs" />
+    <Compile Include="OpenTK\Audio\OpenAL\Alc\AlcEnums.cs" />
+    <Compile Include="OpenTK\Audio\AudioCapture.cs" />
+    <Compile Include="OpenTK\Audio\AudioContext.cs" />
+    <Compile Include="OpenTK\Audio\AudioContextException.cs" />
+    <Compile Include="OpenTK\Audio\AudioDeviceEnumerator.cs" />
+    <Compile Include="OpenTK\Audio\AudioDeviceErrorChecker.cs" />
+    <Compile Include="OpenTK\Audio\AudioDeviceException.cs" />
+    <Compile Include="OpenTK\Audio\AudioException.cs" />
+    <Compile Include="OpenTK\Audio\AudioValueException.cs" />
+    <Compile Include="OpenTK\Compute\CL10\CL.cs" />
+    <Compile Include="OpenTK\Compute\CL10\CLHelper.cs" />
+    <Compile Include="OpenTK\Compute\CL10\Core.cs" />
+    <Compile Include="OpenTK\Compute\CL10\Delegates.cs" />
+    <Compile Include="OpenTK\Compute\CL10\Enums.cs" />
+    <Compile Include="OpenTK\Compute\CL10\ErrorHelper.cs" />
+    <Compile Include="OpenTK\Compute\CL10\ImageFormat.cs" />
+    <Compile Include="OpenTK\Compute\CLHelper.cs" />
+    <Compile Include="OpenTK\Compute\CommandQueue.cs" />
+    <Compile Include="OpenTK\Compute\ComputeContext.cs" />
+    <Compile Include="OpenTK\Compute\Configuration.cs" />
+    <Compile Include="OpenTK\Compute\Device.cs" />
+    <Compile Include="OpenTK\Compute\Enums.cs" />
+    <Compile Include="OpenTK\Compute\Event.cs" />
+    <Compile Include="OpenTK\Compute\Kernel.cs" />
+    <Compile Include="OpenTK\Compute\Memory.cs" />
+    <Compile Include="OpenTK\Compute\Platform.cs" />
+    <Compile Include="OpenTK\Compute\Profiler.cs" />
+    <Compile Include="OpenTK\Compute\Program.cs" />
+    <Compile Include="OpenTK\Compute\Sampler.cs" />
+    <Compile Include="OpenTK\Compute\Structs.cs" />
+    <Compile Include="OpenTK\Graphics\ES10\Core.cs" />
+    <Compile Include="OpenTK\Graphics\ES10\Delegates.cs" />
+    <Compile Include="OpenTK\Graphics\ES10\Enums.cs" />
+    <Compile Include="OpenTK\Graphics\ES10\ErrorHelper.cs" />
+    <Compile Include="OpenTK\Graphics\ES10\ES.cs" />
+    <Compile Include="OpenTK\Graphics\ES10\Helper.cs" />
+    <Compile Include="OpenTK\Graphics\ES11\Core.cs" />
+    <Compile Include="OpenTK\Graphics\ES11\Delegates.cs" />
+    <Compile Include="OpenTK\Graphics\ES11\Enums.cs" />
+    <Compile Include="OpenTK\Graphics\ES11\ErrorHelper.cs" />
+    <Compile Include="OpenTK\Graphics\ES11\ES.cs" />
+    <Compile Include="OpenTK\Graphics\ES11\Helper.cs" />
+    <Compile Include="OpenTK\Graphics\ES20\Core.cs" />
+    <Compile Include="OpenTK\Graphics\ES20\Delegates.cs" />
+    <Compile Include="OpenTK\Graphics\ES20\Enums.cs" />
+    <Compile Include="OpenTK\Graphics\ES20\ErrorHelper.cs" />
+    <Compile Include="OpenTK\Graphics\ES20\ES.cs" />
+    <Compile Include="OpenTK\Graphics\ES20\Helper.cs" />
+    <Compile Include="OpenTK\Graphics\OpenGL\ErrorHelper.cs" />
+    <Compile Include="OpenTK\Graphics\OpenGL\GL.cs" />
+    <Compile Include="OpenTK\Graphics\OpenGL\GLCore.cs" />
+    <Compile Include="OpenTK\Graphics\OpenGL\GLDelegates.cs" />
+    <Compile Include="OpenTK\Graphics\OpenGL\GLEnums.cs" />
+    <Compile Include="OpenTK\Graphics\OpenGL\GLHelper.cs" />
+    <Compile Include="OpenTK\Graphics\Color4.cs" />
+    <Compile Include="OpenTK\Graphics\ColorFormat.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsBindingsBase.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsContext.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsContextBase.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsContextException.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsContextFlags.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsContextMissingException.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsContextVersion.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsErrorException.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsExceptions.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsMode.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsModeComparer.cs" />
+    <Compile Include="OpenTK\Graphics\GraphicsModeException.cs" />
+    <Compile Include="OpenTK\Graphics\IGraphicsContext.cs" />
+    <Compile Include="OpenTK\Graphics\IGraphicsMode.cs" />
+    <Compile Include="OpenTK\Input\ButtonState.cs" />
+    <Compile Include="OpenTK\Input\GamePad.cs" />
+    <Compile Include="OpenTK\Input\GamePadState.cs" />
+    <Compile Include="OpenTK\Input\IGamePadDriver.cs" />
+    <Compile Include="OpenTK\Input\IInputDevice.cs" />
+    <Compile Include="OpenTK\Input\IInputDriver.cs" />
+    <Compile Include="OpenTK\Input\IInputDriver2.cs" />
+    <Compile Include="OpenTK\Input\IJoystickDriver.cs" />
+    <Compile Include="OpenTK\Input\IKeyboardDriver.cs" />
+    <Compile Include="OpenTK\Input\IKeyboardDriver2.cs" />
+    <Compile Include="OpenTK\Input\IMouseDriver.cs" />
+    <Compile Include="OpenTK\Input\IMouseDriver2.cs" />
+    <Compile Include="OpenTK\Input\JoystickDevice.cs" />
+    <Compile Include="OpenTK\Input\Key.cs" />
+    <Compile Include="OpenTK\Input\Keyboard.cs" />
+    <Compile Include="OpenTK\Input\KeyboardDevice.cs" />
+    <Compile Include="OpenTK\Input\KeyboardKeyEventArgs.cs" />
+    <Compile Include="OpenTK\Input\KeyboardState.cs" />
+    <Compile Include="OpenTK\Input\Mouse.cs" />
+    <Compile Include="OpenTK\Input\MouseButton.cs" />
+    <Compile Include="OpenTK\Input\MouseDevice.cs" />
+    <Compile Include="OpenTK\Input\MouseState.cs" />
+    <Compile Include="OpenTK\Math\BezierCurve.cs" />
+    <Compile Include="OpenTK\Math\BezierCurveCubic.cs" />
+    <Compile Include="OpenTK\Math\BezierCurveQuadric.cs" />
+    <Compile Include="OpenTK\Math\Box2.cs" />
+    <Compile Include="OpenTK\Math\Functions.cs" />
+    <Compile Include="OpenTK\Math\Half.cs" />
+    <Compile Include="OpenTK\Math\MathHelper.cs" />
+    <Compile Include="OpenTK\Math\Matrix3d.cs" />
+    <Compile Include="OpenTK\Math\Matrix4.cs" />
+    <Compile Include="OpenTK\Math\Matrix4d.cs" />
+    <Compile Include="OpenTK\Math\Point.cs" />
+    <Compile Include="OpenTK\Math\Quaternion.cs" />
+    <Compile Include="OpenTK\Math\Quaterniond.cs" />
+    <Compile Include="OpenTK\Math\Rectangle.cs" />
+    <Compile Include="OpenTK\Math\Size.cs" />
+    <Compile Include="OpenTK\Math\Vector2.cs" />
+    <Compile Include="OpenTK\Math\Vector2d.cs" />
+    <Compile Include="OpenTK\Math\Vector2h.cs" />
+    <Compile Include="OpenTK\Math\Vector3.cs" />
+    <Compile Include="OpenTK\Math\Vector3d.cs" />
+    <Compile Include="OpenTK\Math\Vector3h.cs" />
+    <Compile Include="OpenTK\Math\Vector4.cs" />
+    <Compile Include="OpenTK\Math\Vector4d.cs" />
+    <Compile Include="OpenTK\Math\Vector4h.cs" />
+    <Compile Include="OpenTK\Platform\Dummy\DummyGLContext.cs" />
+    <Compile Include="OpenTK\Platform\Dummy\DummyWindowInfo.cs" />
+    <Compile Include="OpenTK\Platform\Egl\Egl.cs" />
+    <Compile Include="OpenTK\Platform\Egl\EglContext.cs" />
+    <Compile Include="OpenTK\Platform\Egl\EglGraphicsMode.cs" />
+    <Compile Include="OpenTK\Platform\Egl\EglMacPlatformFactory.cs" />
+    <Compile Include="OpenTK\Platform\Egl\EglWindowInfo.cs" />
+    <Compile Include="OpenTK\Platform\Egl\EglWinPlatformFactory.cs" />
+    <Compile Include="OpenTK\Platform\Egl\EglX11PlatformFactory.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\Agl.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\CarbonAPI.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\CoreFoundation.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\MacOSKeys.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\QuartzDisplayServicesAPI.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonBindings\SpeechChannel.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\AglContext.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\Application.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonGLNative.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonInput.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\CarbonWindowInfo.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\EventInfo.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\HIDInput.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\MacOSException.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\MacOSFactory.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\MacOSGraphicsMode.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\MacOSKeyMap.cs" />
+    <Compile Include="OpenTK\Platform\MacOS\QuartzDisplayDeviceDriver.cs" />
+    <Compile Include="OpenTK\Platform\Windows\Bindings\Wgl.cs" />
+    <Compile Include="OpenTK\Platform\Windows\Bindings\WglCore.cs" />
+    <Compile Include="OpenTK\Platform\Windows\Bindings\WglDelegates.cs" />
+    <Compile Include="OpenTK\Platform\Windows\Bindings\WglEnums.cs" />
+    <Compile Include="OpenTK\Platform\Windows\API.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WglHelper.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinDisplayDevice.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinFactory.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinGLContext.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinGLNative.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinGraphicsMode.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinInputBase.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinKeyMap.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinMMJoystick.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinRawInput.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinRawKeyboard.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinRawMouse.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WinWindowInfo.cs" />
+    <Compile Include="OpenTK\Platform\Windows\WMInput.cs" />
+    <Compile Include="OpenTK\Platform\X11\Bindings\Glx.cs" />
+    <Compile Include="OpenTK\Platform\X11\API.cs" />
+    <Compile Include="OpenTK\Platform\X11\Functions.cs" />
+    <Compile Include="OpenTK\Platform\X11\GlxHelper.cs" />
+    <Compile Include="OpenTK\Platform\X11\Structs.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11DisplayDevice.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11Factory.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11GLContext.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11GLNative.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11GraphicsMode.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11Input.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11Joystick.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11Keyboard.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11KeyMap.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11Mouse.cs" />
+    <Compile Include="OpenTK\Platform\X11\X11WindowInfo.cs" />
+    <Compile Include="OpenTK\Platform\X11\XI2Mouse.cs" />
+    <Compile Include="OpenTK\Platform\DesktopGraphicsContext.cs" />
+    <Compile Include="OpenTK\Platform\DisplayDeviceBase.cs" />
+    <Compile Include="OpenTK\Platform\EmbeddedGraphicsContext.cs" />
+    <Compile Include="OpenTK\Platform\Factory.cs" />
+    <Compile Include="OpenTK\Platform\IDisplayDeviceDriver.cs" />
+    <Compile Include="OpenTK\Platform\INativeGLWindow.cs" />
+    <Compile Include="OpenTK\Platform\IPlatformFactory.cs" />
+    <Compile Include="OpenTK\Platform\IWindowInfo.cs" />
+    <Compile Include="OpenTK\Platform\PlatformException.cs" />
+    <Compile Include="OpenTK\Platform\Utilities.cs" />
+    <Compile Include="OpenTK\Properties\AssemblyInfo.cs" />
+    <Compile Include="OpenTK\Properties\Resources.Designer.cs" />
+    <Compile Include="OpenTK\AutoGeneratedAttribute.cs" />
+    <Compile Include="OpenTK\BindingsBase.cs" />
+    <Compile Include="OpenTK\BlittableValueType.cs" />
+    <Compile Include="OpenTK\Configuration.cs" />
+    <Compile Include="OpenTK\ContextHandle.cs" />
+    <Compile Include="OpenTK\DisplayDevice.cs" />
+    <Compile Include="OpenTK\DisplayIndex.cs" />
+    <Compile Include="OpenTK\DisplayResolution.cs" />
+    <Compile Include="OpenTK\Exceptions.cs" />
+    <Compile Include="OpenTK\FrameEventArgs.cs" />
+    <Compile Include="OpenTK\GameWindow.cs" />
+    <Compile Include="OpenTK\GameWindowFlags.cs" />
+    <Compile Include="OpenTK\IGameWindow.cs" />
+    <Compile Include="OpenTK\INativeWindow.cs" />
+    <Compile Include="OpenTK\IntPtrEqualityComparer.cs" />
+    <Compile Include="OpenTK\KeyPressEventArgs.cs" />
+    <Compile Include="OpenTK\Minimal.cs" />
+    <Compile Include="OpenTK\NativeWindow.cs" />
+    <Compile Include="OpenTK\Toolkit.cs" />
+    <Compile Include="OpenTK\WindowBorder.cs" />
+    <Compile Include="OpenTK\WindowState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenTK\Properties\Resources.resx" />
+    <None Include="OpenTK\OpenTK.csproj" />
+    <None Include="OpenTK\OpenTK.dll.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

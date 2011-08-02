@@ -10,10 +10,6 @@ using Kinetic.Scene;
 using Kinetic.Resource;
 using Kinetic.Render;
 
-using OpenTK;
-using OpenTK.Graphics;
-using OpenTK.Graphics.OpenGL;
-
 namespace KineticExample
 {
 	public class K3TestApplication1: BaseApplication
