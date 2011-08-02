@@ -12,6 +12,7 @@ namespace Kinetic.Render.Overlay
 		public OverlayItem (Bitmap bitmap) {
 			_bitmap = bitmap;
 			_zOrder = 1;
+			_position = null;
 		}
 		
 		public Bitmap Bitmap {

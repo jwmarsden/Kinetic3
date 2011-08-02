@@ -22,7 +22,7 @@ namespace Kinetic.Provide
 			texture.Name = Name;
 			texture.Path = Path;
 			
-			TextureLoader<Texture> textureLoader = new OpenTKTextureLoader<Texture>(texture);
+			TextureLoader<Texture> textureLoader = new OpenTKDiskTextureLoader<Texture>(texture);
 			
 			Catalog.RegisterTexture(ref texture, ref textureLoader);
 		

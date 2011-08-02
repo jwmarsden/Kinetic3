@@ -10,10 +10,10 @@ using OpenTK.Graphics.OpenGL;
 
 namespace Kinetic.Provide
 {
-	public class OpenTKTextureLoader<A>: TextureLoader<A>
+	public class OpenTKDiskTextureLoader<A>: TextureLoader<A>
 		where A: Texture
 	{
-		public OpenTKTextureLoader (A texture): base(texture)
+		public OpenTKDiskTextureLoader (A texture): base(texture)
 		{
 		}
 		

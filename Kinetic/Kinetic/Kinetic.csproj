@@ -76,6 +76,7 @@
     <Compile Include="Render\Overlay\OverlayHolder.cs" />
     <Compile Include="Render\Overlay\AbsolutePosition.cs" />
     <Compile Include="Render\Overlay\OverlayPosition.cs" />
+    <Compile Include="Render\Overlay\OverlayTextureLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IO\" />
