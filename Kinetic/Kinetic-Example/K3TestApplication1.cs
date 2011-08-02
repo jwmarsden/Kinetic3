@@ -15,9 +15,16 @@ namespace KineticExample
 	public class K3TestApplication1: BaseApplication
 	{
 		Texture _kineticBannerTexture = null;
+		string _outputString;
+		int _xPos;
+		int _yPos;
 		
 		public K3TestApplication1 ()
 		{
+			Random random = new Random();
+			_outputString = "This is not Art!";
+			_xPos = (int) (random.NextDouble() * 800);
+			_yPos = (int) (random.NextDouble() * 600);
 		}
 		
 		public override void Initialize() 
@@ -30,15 +37,21 @@ namespace KineticExample
 				Console.Write(string.Format("{0}", extension));	
 			}
 			Console.Write("\r\n");
-			
-			_kineticBannerTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "KineticBanner.jpg");
+			_kineticBannerTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "Resources/KineticBanner.jpg");
 		}
 		
-		public override void Update(long time) {	
+		public override void Update(long time) {
+			if(time % 300 == 0) {
+				Random random = new Random();
+				_outputString = "This is not Art!";
+				_xPos = (int) (random.NextDouble() * 800);
+				_yPos = (int) (random.NextDouble() * 600);
+			}
 		}
 		
 		public override void ApplicationRender() {
-			MainRenderer.DrawTexture(_kineticBannerTexture);
+			MainRenderer.Draw(_kineticBannerTexture,50,50,120,100);
+			MainRenderer.Draw(_xPos, _yPos, Color.White, _outputString);
 		}
 		
 		public static void Main (string[] args) 

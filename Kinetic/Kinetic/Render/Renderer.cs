@@ -24,14 +24,14 @@ namespace Kinetic.Render
 {
 	public abstract class Renderer
 	{
-		protected int _x;
-		protected int _y;
-		protected int _width;
-		protected int _height;
+		public int _x;
+		public int _y;
+		public int _width;
+		public int _height;
 
-		protected Color _background;
+		public Color _background;
 		
-		protected Catalog _catalog;
+		public Catalog _catalog;
 		
 		public Renderer ()
 		{
@@ -155,12 +155,19 @@ namespace Kinetic.Render
 		/// Text and 2D
 		/// </summary>
 		// SelectFont
+		public abstract void Draw(Texture Texture);
 		
-		// public abstract void Draw(int XPos, int YPos, Color color, string text);
+		public abstract void Draw(Bitmap Bitmap);
 		
-		// public abstract void Draw(int XPos, int YPos, <image> image);
+		public abstract void Draw(Texture Texture, int XPos, int YPos);
 		
-		public abstract void DrawTexture(Texture Texture);
+		public abstract void Draw(Bitmap Bitmap, int XPos, int YPos);
+		
+		public abstract void Draw(Texture Texture, int XPos, int YPos, int Width, int Height);
+		
+		public abstract void Draw(Bitmap Bitmap, int XPos, int YPos, int Width, int Height);
+		
+		public abstract void Draw(int XPos, int YPos, Color color, string text);
 		
 		/// <summary>
 		/// Resource Management

@@ -72,6 +72,10 @@
     <Compile Include="Resource\Asset.cs" />
     <Compile Include="Resource\CatalogEntry.cs" />
     <Compile Include="Provider\Provider.cs" />
+    <Compile Include="Render\Overlay\OverlayItem.cs" />
+    <Compile Include="Render\Overlay\OverlayHolder.cs" />
+    <Compile Include="Render\Overlay\AbsolutePosition.cs" />
+    <Compile Include="Render\Overlay\OverlayPosition.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IO\" />
@@ -79,6 +83,7 @@
     <Folder Include="Resource\" />
     <Folder Include="Scene\" />
     <Folder Include="Provider\" />
+    <Folder Include="Render\Overlay\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />

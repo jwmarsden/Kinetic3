@@ -1,33 +1,31 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Kinetic/Kinetic-Example/K3TestApplication1.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs">
     <Files>
-      <File FileName="Kinetic/Kinetic-Example/K3TestApplication1.cs" Line="49" Column="4" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs" Line="161" Column="9" />
-      <File FileName="Kinetic/Kinetic/Render/Renderer.cs" Line="210" Column="18" />
-      <File FileName="Kinetic/Kinetic/Resource/Texture.cs" Line="26" Column="9" />
-      <File FileName="Kinetic/Kinetic/Resource/Asset.cs" Line="27" Column="9" />
+      <File FileName="Prototype/Graphics1/Graphics1.cs" Line="51" Column="4" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs" Line="224" Column="19" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/Loader/OpenTKTextureLoader.cs" Line="38" Column="38" />
+      <File FileName="Kinetic/Kinetic-Example/K3TestApplication1.cs" Line="48" Column="14" />
       <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKResourceManager.cs" Line="13" Column="43" />
-      <File FileName="Kinetic/Kinetic/Resource/Catalog.cs" Line="79" Column="4" />
-      <File FileName="Kinetic/Kinetic/Resource/TextureLoader.cs" Line="8" Column="13" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/Loader/OpenTKTextureLoader.cs" Line="36" Column="20" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKCamera.cs" Line="46" Column="1" />
-      <File FileName="Kinetic/Kinetic/Resource/Loader.cs" Line="12" Column="1" />
       <File FileName="Kinetic/Kinetic-OpenTK/Application/BaseApplication.cs" Line="186" Column="25" />
-      <File FileName="Kinetic/Kinetic/IO/Display.cs" Line="1" Column="1" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKDisplay.cs" Line="190" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Kinetic">
-            <Node name="Kinetic-Example">
+          <Node name="Kinetic" expanded="True">
+            <Node name="Kinetic-Example" expanded="True" selected="True" />
+            <Node name="Kinetic-OpenTK" expanded="True">
+              <Node name="Application" expanded="True" />
+              <Node name="Provider" expanded="True">
+                <Node name="OpenTK" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+          <Node name="Prototype" expanded="True">
+            <Node name="Graphics1" expanded="True">
               <Option id="ShowVersionControlOverlays" value="True" />
               <Option id="ShowAllFiles" value="False" />
             </Node>
-          </Node>
-          <Node name="OpenTK" expanded="True">
-            <Node name="OpenTK" selected="True" />
           </Node>
         </State>
       </Pad>
