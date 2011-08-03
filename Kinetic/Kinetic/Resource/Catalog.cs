@@ -69,6 +69,15 @@ namespace Kinetic.Resource
 			}
 		}
 		
+		public TextureLoader<Texture> FindTextureLoader(Texture Texture) {
+			CatalogEntry<Texture, TextureLoader<Texture>> textureCatalogEntry = _textureCatalog[Texture.Name];
+			if(textureCatalogEntry != null) {
+				return textureCatalogEntry.Loader;
+			} else {
+				return null;
+			}
+		}
+		
 		public TextureLoader<Texture> FindTextureLoader(string name) {
 			CatalogEntry<Texture, TextureLoader<Texture>> textureCatalogEntry = _textureCatalog[name];
 			if(textureCatalogEntry != null) {

@@ -42,5 +42,6 @@
     <None Include="screenshot.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="k3.png" />
   </ItemGroup>
 </Project>

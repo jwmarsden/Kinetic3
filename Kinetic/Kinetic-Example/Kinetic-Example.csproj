@@ -46,9 +46,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <None Include="Resources\KineticBanner.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Resources\k3.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="OpenTK, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">

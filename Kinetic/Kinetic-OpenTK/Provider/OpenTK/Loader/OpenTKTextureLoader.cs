@@ -48,6 +48,30 @@ namespace Kinetic.Provide
 				Console.WriteLine(string.Format("Resource \"{0}\" -> Video Memory ({1})", _texture.Name, _texture.Handle));
 			}
 		}
+		
+		public override void ReleaseFromSystemMemory() {
+			
+		}
+		
+		public override void ReleaseFromVideoMemory() {
+			
+		}
+		
+		public override void UpdateSystemMemory() {
+			if(!_texture.InSystemMemory) {
+				LoadIntoSystemMemory();
+			} else {
+				// TODO: Release and upload again?	
+			}
+		}
+		
+		public override void UpdateVideoMemory() {
+			if(_texture.InSystemMemory && ! _texture.InVideoMemory) {
+				LoadIntoVideoMemory();
+			} else {
+				// TODO: Release and upload again?	
+			}
+		}
 	}
 }
 

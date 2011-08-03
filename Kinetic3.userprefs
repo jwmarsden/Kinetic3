@@ -4,17 +4,19 @@
     <Files>
       <File FileName="Prototype/Graphics1/Graphics1.cs" Line="51" Column="4" />
       <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKRenderer.cs" Line="224" Column="19" />
-      <File FileName="Kinetic/Kinetic-Example/K3TestApplication1.cs" Line="18" Column="3" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKResourceManager.cs" Line="34" Column="1" />
+      <File FileName="Kinetic/Kinetic-Example/K3TestApplication1.cs" Line="50" Column="34" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/OpenTKResourceManager.cs" Line="28" Column="70" />
       <File FileName="Kinetic/Kinetic-OpenTK/Application/BaseApplication.cs" Line="186" Column="25" />
-      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/Loader/OpenTKTextureLoader_1.cs" Line="30" Column="39" />
-      <File FileName="Kinetic/Kinetic/Resource/Loader.cs" Line="1" Column="1" />
+      <File FileName="Kinetic/Kinetic-OpenTK/Provider/OpenTK/Loader/OpenTKTextureLoader.cs" Line="66" Column="4" />
+      <File FileName="Kinetic/Kinetic/Resource/Loader.cs" Line="16" Column="1" />
       <File FileName="Kinetic/Kinetic/Resource/Texture.cs" Line="34" Column="23" />
       <File FileName="Kinetic/Kinetic/Resource/TextureSource.cs" Line="8" Column="1" />
       <File FileName="Kinetic/Kinetic/Resource/TextureLoader.cs" Line="14" Column="3" />
-      <File FileName="Kinetic/Kinetic/Render/Overlay/OverlayHolder.cs" Line="74" Column="4" />
+      <File FileName="Kinetic/Kinetic/Render/Overlay/OverlayHolder.cs" Line="77" Column="36" />
       <File FileName="Kinetic/Kinetic/Render/Overlay/OverlayPosition.cs" Line="1" Column="1" />
       <File FileName="Kinetic/Kinetic/Resource/TextureDiskSource.cs" Line="3" Column="17" />
+      <File FileName="Kinetic/Kinetic/Resource/ResourceManager.cs" Line="13" Column="72" />
+      <File FileName="Kinetic/Kinetic/Resource/Catalog.cs" Line="73" Column="89" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,13 +24,11 @@
           <Node name="Kinetic" expanded="True">
             <Node name="Kinetic" expanded="True">
               <Node name="Render" expanded="True">
-                <Node name="Overlay" expanded="True">
-                  <Node name="OverlayHolder.cs" selected="True" />
-                </Node>
+                <Node name="Overlay" expanded="True" />
               </Node>
               <Node name="Resource" expanded="True" />
             </Node>
-            <Node name="Kinetic-Example" expanded="True" />
+            <Node name="Kinetic-Example" expanded="True" selected="True" />
             <Node name="Kinetic-OpenTK" expanded="True">
               <Node name="Application" expanded="True" />
               <Node name="Provider" expanded="True">

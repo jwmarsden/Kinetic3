@@ -33,24 +33,20 @@ namespace KineticExample
 				Console.Write(string.Format("{0}", extension));	
 			}
 			Console.Write("\r\n");
+
+			_overlayHolder = new OverlayHolder(ResourceManager, MainRenderer.Catalog, MainRenderer.Width, MainRenderer.Height);
 			
-			/*
-			_overlayHolder.Resize(MainRenderer.Width, MainRenderer.Height);
-			
-			_kineticBannerTexture = ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "Resources/KineticBanner.jpg");
-		
-			_overlayHolder._background = new OverlayItem(new Bitmap("Resources/KineticBanner.jpg"));
-			_overlayHolder._dirty = true;
-			*/
-			
-			_overlayHolder = new OverlayHolder(MainRenderer.Catalog);
+			ResourceManager.ImportTexture(MainRenderer.Catalog, "KineticBanner", "Resources/KineticBanner.jpg");
 		}
 		
 		public override void Update(long time) {
 		}
 		
 		public override void ApplicationRender() {
-			//_overlayHolder.GetOverlay().Save("blah.2.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+			Texture overlayTexture = _overlayHolder.GetOverlay();
+			if(overlayTexture != null) {
+				overlayTexture.Bitmap.Save("blah.3.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+			}
 			//MainRenderer.Draw(_overlayHolder.GetOverlay(),0,0,800,600);
 		}
 		

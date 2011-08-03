@@ -8,7 +8,9 @@ namespace Kinetic.Resource
 		{
 		}
 
-		public abstract Texture ImportTexture(Catalog catalog, string Name, string Path);
+		public abstract TextureLoader<Texture> CreateTextureLoader(Texture Texture);
+		
+		public abstract Texture ImportTexture(Catalog Catalog, string Name, string Path);
 		
 		/*
 		public abstract ModelGroup ImportModel(Catalog catalog, string name, string path);

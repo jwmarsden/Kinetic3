@@ -9,6 +9,7 @@ namespace Kinetic.Render.Overlay
 {
 	public class OverlayHolder: TextureSource
 	{
+		public ResourceManager _resourceManager;
 		public Catalog _catalog;
 		public int _width;
 		public int _height;
@@ -21,7 +22,8 @@ namespace Kinetic.Render.Overlay
 		
 		public bool _newBitmap;
 		
-		public OverlayHolder (Catalog Catalog) {
+		public OverlayHolder (ResourceManager ResourceManager, Catalog Catalog) {
+			_resourceManager = ResourceManager;
 			_catalog = Catalog;
 			_width = 0;
 			_height = 0;
@@ -35,8 +37,9 @@ namespace Kinetic.Render.Overlay
 			_newBitmap = false;
 		}
 		
-		public OverlayHolder (Catalog Catalog, int Width, int Height)
+		public OverlayHolder (ResourceManager ResourceManager, Catalog Catalog, int Width, int Height)
 		{
+			_resourceManager = ResourceManager;
 			_catalog = Catalog;
 			_width = Width;
 			_height = Height;
@@ -57,6 +60,13 @@ namespace Kinetic.Render.Overlay
 		}
 		
 		public void Initialize() {
+			_overlayTexture = new Texture();
+			_overlayTexture.Name = "$overlay";
+			_overlayTexture.TextureSource = this;
+			
+			TextureLoader<Texture> loader = _resourceManager.CreateTextureLoader(_overlayTexture);
+			_catalog.RegisterTexture(ref _overlayTexture, ref loader);
+			
 			_dirty = true;
 		}
 		
@@ -64,16 +74,27 @@ namespace Kinetic.Render.Overlay
 			return (_background != null || _items.Count != 0);
 		}
 		
-		public Bitmap GetOverlay() {
+		public Bitmap GetOverlayImage() {
 			if(_overlay == null || _dirty == true) {
-				_overlay = GenerateOverlay();
+				_overlay = GenerateOverlayImage();
 				_dirty = false;
 				_newBitmap = true;
 			}
 			return _overlay;
 		}
 		
-		public Bitmap GenerateOverlay() {
+		public Texture GetOverlay() {
+			if(_overlay == null || _dirty == true || _newBitmap == true) {
+				GetOverlayImage();
+				_catalog.FindTextureLoader("$overlay").UpdateVideoMemory();
+			}
+			return _overlayTexture;
+		}
+		
+		public Bitmap GenerateOverlayImage() {
+			if(_height == 0 || _width == 0) {
+				return null;
+			}
 			Bitmap bitmap = new Bitmap(_width, _height);
 			Console.WriteLine(string.Format("Generate Overlay ({0}x{1}).", _width, _height));
 			using (Graphics graphics = Graphics.FromImage(bitmap))
@@ -104,12 +125,11 @@ namespace Kinetic.Render.Overlay
 		}
 		
 		public Bitmap GetNewBitmap() {
-			_newBitmap = false;
-			return GetOverlay();
+			return GetOverlayImage();
 		}
 		
 		public Bitmap GetBitmap() {
-			return GetOverlay();
+			return GetOverlayImage();
 		}
 	}
 }

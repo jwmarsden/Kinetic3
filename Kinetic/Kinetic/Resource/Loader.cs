@@ -12,6 +12,14 @@ namespace Kinetic.Resource
 		public abstract void LoadIntoSystemMemory();
 
 		public abstract void LoadIntoVideoMemory();
+		
+		public abstract void ReleaseFromSystemMemory();
+		
+		public abstract void ReleaseFromVideoMemory();
+		
+		public abstract void UpdateSystemMemory();
+		
+		public abstract void UpdateVideoMemory();
 	}
 }
 

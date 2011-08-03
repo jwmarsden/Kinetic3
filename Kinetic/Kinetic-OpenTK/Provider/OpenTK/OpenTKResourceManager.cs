@@ -10,6 +10,10 @@ namespace Kinetic.Provide
 		{
 		}
 		
+		public override TextureLoader<Texture> CreateTextureLoader(Texture Texture) {
+			return new OpenTKTextureLoader<Texture>(Texture);
+		}
+		
 		public override Texture ImportTexture(Catalog Catalog, string Name, string Path) {
 			Console.WriteLine(string.Format("ImportTexture({0},\"{1}\",\"{2}\")", Catalog, Name, Path));
 			
@@ -21,7 +25,7 @@ namespace Kinetic.Provide
 			texture.ID = 1;
 			texture.Name = Name;
 			texture.TextureSource = new TextureDiskSource(Path);
-			TextureLoader<Texture> textureLoader = new OpenTKTextureLoader<Texture>(texture);
+			TextureLoader<Texture> textureLoader = CreateTextureLoader(texture);
 			
 			Catalog.RegisterTexture(ref texture, ref textureLoader);
 		
