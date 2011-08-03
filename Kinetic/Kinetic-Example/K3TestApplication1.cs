@@ -16,7 +16,6 @@ namespace KineticExample
 	public class K3TestApplication1: BaseApplication
 	{
 		
-		
 		OverlayHolder _overlayHolder;
 		
 		public K3TestApplication1 ()
@@ -51,7 +50,7 @@ namespace KineticExample
 		}
 		
 		public override void ApplicationRender() {
-			_overlayHolder.GetOverlay().Save("blah.2.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+			//_overlayHolder.GetOverlay().Save("blah.2.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
 			//MainRenderer.Draw(_overlayHolder.GetOverlay(),0,0,800,600);
 		}
 		

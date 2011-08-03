@@ -22,18 +22,18 @@ namespace Kinetic.Resource
 {
 	public class Texture: Asset
 	{
-		public string _path;
 		public Bitmap _textureBitmap;
+		public TextureSource _source;
 		
 		public Texture ()
 		{
-			_path = null;
 			_textureBitmap = null;
+			_source = null;
 		}
 		
-		public string Path {
-			get { return _path; }
-			set { _path = value; }
+		public TextureSource TextureSource {
+			get { return _source; }
+			set { _source = value; }
 		}
 		
 		public Bitmap Bitmap {

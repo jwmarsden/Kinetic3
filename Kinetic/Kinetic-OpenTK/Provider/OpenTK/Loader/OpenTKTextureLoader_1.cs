@@ -10,17 +10,25 @@ using OpenTK.Graphics.OpenGL;
 
 namespace Kinetic.Provide
 {
-	public class OpenTKDiskTextureLoader<A>: TextureLoader<A>
+	public class OpenTKTextureLoader<A>: TextureLoader<A>
 		where A: Texture
 	{
-		public OpenTKDiskTextureLoader (A texture): base(texture)
+		public OpenTKTextureLoader (A texture): base(texture)
 		{
 		}
 		
 		public override void LoadIntoSystemMemory() {
 			if(!_texture.InSystemMemory) {
 				Console.WriteLine(string.Format("Resource \"{0}\" Not Found in System Memory", _texture.Name));
-				_texture.Bitmap = new Bitmap(_texture.Path);
+				TextureSource source = _texture.TextureSource;
+				if(source == null) {
+					throw new Exception(string.Format("No texture source found for Texture {1} with ID {0}", _texture.ID, _texture.Name));
+				}
+				if(source.HasBitmap()) {
+					_texture.Bitmap = source.GetBitmap();	
+				} else {
+					// TODO: Load the default bitmap.	
+				}
 				_texture.InSystemMemory = true;
 				Console.WriteLine(string.Format("Resource \"{0}\" -> System Memory", _texture.Name));
 			}
